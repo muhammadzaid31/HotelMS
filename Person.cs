@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace HotelMS
 {
@@ -50,6 +51,15 @@ namespace HotelMS
             Gender = gender;
             PNumber = pNumber;
             Email = email;                
+        }
+        public static bool Login(string Username, string username, string Password, string password)  
+        {
+            if (Username == username && Password == password) 
+            { 
+                return true; 
+            }
+            else
+                return false;   
         }
             
     }

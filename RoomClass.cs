@@ -10,7 +10,36 @@ namespace HotelMS
     {
         private string rID;
         private string rType;
-        private string
-        public RoomClass() { }
+        private int rPrice;
+        private bool rStatus;
+
+        public string RID 
+        {
+            get { return rID; }
+            set { rID = value; }    
+        }
+        public string RType 
+        {
+            get {return rType; }
+            set { rType = value; }    
+        }
+        public int RPrice 
+        {
+            get { return rPrice; }
+            set { rPrice = value; }
+        }
+        
+        public bool RStatus 
+        {
+            get { return rStatus; }
+            set { rStatus = value; }
+        }
+        public RoomClass(string rID, string rType, int rPrice, bool rStatus) 
+        {
+            RID = rID;
+            RType = rType;
+            RPrice = rPrice;
+            RStatus = rStatus;
+        }
     }
 }

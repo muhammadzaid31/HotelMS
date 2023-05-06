@@ -15,7 +15,7 @@ namespace HotelMS
         public string AID
         {
             get { return aID; }
-            set { AID = value; }
+            set { aID = value; }
         }
 
         public int ID
