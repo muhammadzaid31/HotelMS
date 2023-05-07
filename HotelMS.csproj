@@ -425,6 +425,18 @@
     <EmbeddedResource Include="AdminRc.resx">
       <DependentUpon>AdminRc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminRcA.resx">
+      <DependentUpon>AdminRcA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRcD.resx">
+      <DependentUpon>AdminRcD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRcVA.resx">
+      <DependentUpon>AdminRcVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRcVp.resx">
+      <DependentUpon>AdminRcVp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guest.resx">
       <DependentUpon>Guest.cs</DependentUpon>
     </EmbeddedResource>
