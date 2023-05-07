@@ -69,7 +69,8 @@ namespace HotelMS
             }
             ReceptionistClass rc1 = new ReceptionistClass(rcID, rcName, rcDoB, 
                 rcGender,rcPhone,rcEmail, rceID, rcPfp );
-          
+
+            
             string connString = "server = localhost ;" +
           " uid=root;" +
           " pwd = '' ; " +

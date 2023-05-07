@@ -78,8 +78,10 @@ namespace HotelMS
                 newRow.Cells[6].Value = ListID[i];
                 Receptionists.Rows.Add(newRow);
             }
-           conn.Close();
+            reader.Close();
+            conn.Close();
         }
+
 
         private void Receptionists_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

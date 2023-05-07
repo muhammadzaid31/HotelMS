@@ -8,7 +8,10 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Ocsp;
+using static System.Net.WebRequestMethods;
 using static LinqToDB.Reflection.Methods.LinqToDB;
 using static LinqToDB.Sql;
 
@@ -31,7 +34,7 @@ namespace HotelMS
              " pwd = '' ; " +
              "database = hotel";
                 string query = "DELETE FROM receptionists WHERE rcID = @rcID";
-                string query1 = "Select ID from Receptionists Where rcID = @rcID";
+                string query1 = "Select ID from users Where rcID = @rcID";
                 string query2 = "DELETE FROM users WHERE ID = @ID;";
                 MySqlConnection conn = new MySqlConnection(connString);
                 conn.Open();
@@ -46,8 +49,8 @@ namespace HotelMS
                 command2.Parameters.AddWithValue("@ID", id);
                 command2.ExecuteNonQuery();
                 MessageBox.Show("Receptionist Account Succesfully Deleted");
-                conn.Close();
                 this.Close();
+                conn.Close();
             }
             catch 
             {

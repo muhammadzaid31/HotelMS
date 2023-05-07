@@ -419,6 +419,9 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminM.resx">
+      <DependentUpon>AdminM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminR.resx">
       <DependentUpon>AdminR.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRcD.resx">
       <DependentUpon>AdminRcD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRcU.resx">
+      <DependentUpon>AdminRcU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRcVA.resx">
       <DependentUpon>AdminRcVA.cs</DependentUpon>

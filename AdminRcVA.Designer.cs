@@ -36,6 +36,7 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Receptionists)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.phone,
             this.email,
             this.ID});
-            this.Receptionists.Location = new System.Drawing.Point(39, 26);
+            this.Receptionists.Location = new System.Drawing.Point(40, 76);
             this.Receptionists.Name = "Receptionists";
             this.Receptionists.ReadOnly = true;
             this.Receptionists.Size = new System.Drawing.Size(737, 257);
@@ -103,17 +104,29 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(263, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(298, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Current Receptionists";
+            // 
             // AdminRcVA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Receptionists);
             this.Name = "AdminRcVA";
             this.Text = "AdminRcVA";
             this.Load += new System.EventHandler(this.AdminRcVA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Receptionists)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -127,5 +140,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.Label label1;
     }
 }
