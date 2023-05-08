@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Deployment.Internal;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -27,7 +28,7 @@ namespace HotelMS
     {
         private string filePath;
         private OpenFileDialog openFileDialog1 = new OpenFileDialog();
-        public byte[] imageData;
+        public byte[] rcPfp;
         public AdminRcU()
         {
             InitializeComponent();
@@ -45,16 +46,13 @@ namespace HotelMS
             int rceID = int.Parse(txtID.Text);
             string rcUsername = txtUsername.Text;
             string rcPassword = txtPassword.Text;
-            if (string.IsNullOrEmpty(filePath))
+            Image image = pB1.Image;
+            byte[] rcPfp;
+            using (MemoryStream stream = new MemoryStream())
             {
-                MessageBox.Show("Please select an image file first.");
-                return;
-            }
-            byte[] rcPfp = imageData;
-            if (!int.TryParse(txtID.Text, out rceID))
-            {
-                MessageBox.Show("Please enter a valid ID.");
-                return;
+
+                image.Save(stream, ImageFormat.Jpeg);
+                rcPfp = stream.ToArray();
             }
             ReceptionistClass rc1 = new ReceptionistClass(rcID, rcName, rcDoB,
                 rcGender, rcPhone, rcEmail, rceID, rcPfp);
@@ -96,10 +94,12 @@ namespace HotelMS
             " pwd = '' ; " +
             "database = hotel";
 
-            string query = "SELECT * FROM Receptionists";
+            string rcID = txtUID.Text;
+            string query = "SELECT * FROM Receptionists WHERE rcID=@rcID";
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
+            command.Parameters.AddWithValue("@rcID",rcID);
             MySqlDataReader reader = command.ExecuteReader();
 
             reader.Read();
@@ -111,6 +111,7 @@ namespace HotelMS
             txtPhone.Text = reader["Phone"].ToString();
             txtEmail.Text = reader["Email"].ToString();
             txtID.Text = reader["ID"].ToString();
+            int RCID = int.Parse(reader["ID"].ToString());
             byte[] data = (byte[])reader["rcProfilePic"];
 
             
@@ -123,8 +124,9 @@ namespace HotelMS
             pB1.Image = bmp;
         
         reader.Close();
-            string query1 = "SELECT * FROM users";
+            string query1 = "SELECT * FROM users WHERE ID = @ID ";
             MySqlCommand command1 = new MySqlCommand(query1, conn);
+            command1.Parameters.AddWithValue("@ID", RCID);
             MySqlDataReader reader1 = command.ExecuteReader();
 
             reader1.Read();
@@ -144,14 +146,17 @@ namespace HotelMS
                 filePath = openFileDialog1.FileName;
 
                 // Convert the selected image to a byte array
-                imageData = File.ReadAllBytes(filePath);
+                rcPfp = File.ReadAllBytes(filePath);
             }
              if (string.IsNullOrEmpty(filePath))
             {
-                MessageBox.Show("Please select an image file first.");
-                return;
+                MemoryStream ms1 = new MemoryStream(rcPfp);
+
+
+                Bitmap bmp1 = new Bitmap(ms1);
+                pB1.Image = bmp1;
             }
-            MemoryStream ms = new MemoryStream(imageData);
+            MemoryStream ms = new MemoryStream(rcPfp);
 
 
             Bitmap bmp = new Bitmap(ms);

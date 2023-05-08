@@ -130,9 +130,9 @@
             // 
             // pfp1
             // 
-            this.pfp1.Location = new System.Drawing.Point(358, 42);
+            this.pfp1.Location = new System.Drawing.Point(330, 29);
             this.pfp1.Name = "pfp1";
-            this.pfp1.Size = new System.Drawing.Size(216, 189);
+            this.pfp1.Size = new System.Drawing.Size(257, 244);
             this.pfp1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pfp1.TabIndex = 2;
             this.pfp1.TabStop = false;

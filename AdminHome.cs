@@ -12,6 +12,7 @@ namespace HotelMS
 {
     public partial class AdminHome : Form
     {
+       
         public AdminHome()
         {
             InitializeComponent();

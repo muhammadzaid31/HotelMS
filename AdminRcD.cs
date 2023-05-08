@@ -33,26 +33,28 @@ namespace HotelMS
              " uid=root;" +
              " pwd = '' ; " +
              "database = hotel";
-                string query = "DELETE FROM receptionists WHERE rcID = @rcID";
-                string query1 = "Select ID from users Where rcID = @rcID";
-                string query2 = "DELETE FROM users WHERE ID = @ID;";
                 MySqlConnection conn = new MySqlConnection(connString);
                 conn.Open();
-                MySqlCommand command = new MySqlCommand(query, conn);
-                command.Parameters.AddWithValue("@rcID", rcID);
-                command.ExecuteNonQuery();
+                string query1 = "Select ID from Receptionists Where rcID = @rcID";
                 MySqlCommand command1 = new MySqlCommand(query1, conn);
                 command1.Parameters.AddWithValue("@rcID", rcID);
-                MySqlDataReader reader = command.ExecuteReader();
+                MySqlDataReader reader = command1.ExecuteReader();
+                reader.Read();
                 string id = reader.GetString(0).ToString();
+                reader.Close();
+                string query2 = "DELETE FROM users WHERE ID = @ID;";
                 MySqlCommand command2 = new MySqlCommand(query2, conn);
                 command2.Parameters.AddWithValue("@ID", id);
                 command2.ExecuteNonQuery();
+                string query = "DELETE FROM Receptionists WHERE rcID = @rcID";
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("@rcID", rcID);
+                command.ExecuteNonQuery();
                 MessageBox.Show("Receptionist Account Succesfully Deleted");
                 this.Close();
                 conn.Close();
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Receptionist Account Succesfully Deleted");
                 this.Close();

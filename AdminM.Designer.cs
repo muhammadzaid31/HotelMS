@@ -102,6 +102,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -113,6 +114,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -124,6 +126,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label2
             // 
@@ -147,9 +150,9 @@
             // 
             // pfp1
             // 
-            this.pfp1.Location = new System.Drawing.Point(387, 42);
+            this.pfp1.Location = new System.Drawing.Point(349, 26);
             this.pfp1.Name = "pfp1";
-            this.pfp1.Size = new System.Drawing.Size(216, 189);
+            this.pfp1.Size = new System.Drawing.Size(267, 245);
             this.pfp1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pfp1.TabIndex = 6;
             this.pfp1.TabStop = false;
@@ -165,6 +168,7 @@
             this.Controls.Add(this.pfp1);
             this.Name = "AdminM";
             this.Text = "AdminM";
+            this.Load += new System.EventHandler(this.AdminM_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pfp1)).EndInit();
             this.ResumeLayout(false);

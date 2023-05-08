@@ -42,7 +42,7 @@ namespace HotelMS
           " pwd = '' ; " +
           "database = hotel";
 
-            string query = "SELECT * FROM Receptionists ";
+            string query = "SELECT * FROM Admin ";
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
@@ -51,7 +51,7 @@ namespace HotelMS
 
             if (reader.Read())
             {
-                label2.Text = reader.GetString(1).ToString();
+                label2.Text = reader["Name"].ToString();
                 byte[] imageData = (byte[])reader["aProfilePic"];
                 MemoryStream ms = new MemoryStream(imageData);
                 pfp.Image = Image.FromStream(ms);
@@ -63,12 +63,22 @@ namespace HotelMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            new AdminRD().ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            new AdminRU().ShowDialog();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new AdminRVa().ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new AdminRA().ShowDialog();
         }
     }
 }

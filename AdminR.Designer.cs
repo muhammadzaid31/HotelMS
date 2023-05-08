@@ -53,7 +53,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(172, 330);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(172, 402);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // back
@@ -89,6 +89,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "View All";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -100,6 +101,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -127,9 +129,9 @@
             // 
             // pfp
             // 
-            this.pfp.Location = new System.Drawing.Point(381, 12);
+            this.pfp.Location = new System.Drawing.Point(347, 12);
             this.pfp.Name = "pfp";
-            this.pfp.Size = new System.Drawing.Size(180, 166);
+            this.pfp.Size = new System.Drawing.Size(247, 238);
             this.pfp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pfp.TabIndex = 1;
             this.pfp.TabStop = false;
@@ -138,7 +140,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 218);
+            this.label1.Location = new System.Drawing.Point(351, 274);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 29);
             this.label1.TabIndex = 2;
@@ -148,7 +150,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(458, 218);
+            this.label2.Location = new System.Drawing.Point(497, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 29);
             this.label2.TabIndex = 3;
@@ -158,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 330);
+            this.ClientSize = new System.Drawing.Size(800, 402);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pfp);

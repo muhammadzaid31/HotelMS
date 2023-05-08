@@ -33,21 +33,21 @@ namespace HotelMS
                 string Role = txtRole.Text;
                 string Username = txtUsername.Text;
                 string Password = txtPassword.Text;
-                switch (Role) 
+                switch (Role)
                 {
                     case "Receptionist":
                         MySqlConnection conn = new MySqlConnection(connString);
                         conn.Open();
                         MySqlCommand command = new MySqlCommand(query, conn);
                         MySqlDataReader reader = command.ExecuteReader();
-                        while (reader.Read()) 
+                        while (reader.Read())
                         {
-                            string username= reader.GetString(1);
-                            string password= reader.GetString(2);
+                            string username = reader.GetString(1);
+                            string password = reader.GetString(2);
                             string role = reader.GetString(3);
-                            if (role == Role) 
+                            if (role == Role)
                             {
-                                bool temp = Person.Login(Username,username,Password,password);
+                                bool temp = Person.Login(Username, username, Password, password);
                                 if (temp)
                                 {
                                     MessageBox.Show("Successfully Signed in");
@@ -56,10 +56,10 @@ namespace HotelMS
                                     this.Close();
                                     break;
                                 }
-                                else 
+                                else
                                 {
                                     MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
-                                break;
+                                    break;
                                 }
                             }
                         }
@@ -70,6 +70,7 @@ namespace HotelMS
                         conn1.Open();
                         MySqlCommand command1 = new MySqlCommand(query, conn1);
                         MySqlDataReader reader1 = command1.ExecuteReader();
+                        int count = 0;
                         while (reader1.Read())
                         {
                             string username = reader1.GetString(1);
@@ -82,49 +83,63 @@ namespace HotelMS
                                 {
                                     MessageBox.Show("Successfully Signed in");
                                     this.Hide();
-                                    new ManagerHome().ShowDialog();
+                                    ManagerHome myForm = new ManagerHome();
+                                    myForm.UID = int.Parse(reader1.GetString(0));
+                                    myForm.ShowDialog();
                                     this.Close();
                                     break;
                                 }
-                                else
+                                count++;
+
+                            }
+
+                        }
+                        if (count != 0)
+                        {
+                            MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
+                            conn1.Close();
+
+                        }
+                        break;
+
+
+                    case "Admin":
+                        MySqlConnection conn2 = new MySqlConnection(connString);
+                        conn2.Open();
+                        MySqlCommand command2 = new MySqlCommand(query, conn2);
+                        MySqlDataReader reader2 = command2.ExecuteReader();
+                        int count1 = 0;
+                        while (reader2.Read())
+                        {
+                            string username = reader2.GetString(1);
+                            string password = reader2.GetString(2);
+                            string role = reader2.GetString(3);
+                            if (role == Role)
+                            {
+                                bool temp = Person.Login(Username, username, Password, password);
+                                if (temp)
                                 {
-                                    MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
+                                    MessageBox.Show("Successfully Signed in");
+                                    this.Hide();
+                                    new AdminHome().ShowDialog();
+                                    this.Close();
                                     break;
                                 }
+                                count1++;
                             }
                         }
-                        conn1.Close();
-                        break;
-                    case "Admin":
-                    MySqlConnection conn2 = new MySqlConnection(connString);
-                    conn2.Open();
-                    MySqlCommand command2 = new MySqlCommand(query, conn2);
-                    MySqlDataReader reader2 = command2.ExecuteReader();
-                    while (reader2.Read())
-                    {
-                        string username = reader2.GetString(1);
-                        string password = reader2.GetString(2);
-                        string role = reader2.GetString(3);
-                        if (role == Role)
+                        if (count1 != 0)
                         {
-                            bool temp = Person.Login(Username, username, Password, password);
-                            if (temp)
-                            {
-                                MessageBox.Show("Successfully Signed in");
-                                this.Hide();
-                                new AdminHome().ShowDialog();
-                                this.Close();
-                                break;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
-                                break;
-                            }
+                            MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
+                            conn2.Close();
+
                         }
-                    }
-                    conn2.Close();
-                    break;
+                        break;
+
+                }
+                if (Role != "Admin" || Role != "Manager" || Role != "Receptionist") 
+                {
+                    MessageBox.Show("Please Enter Valid Role");
                 }
              }
             catch (Exception ex)

@@ -215,11 +215,47 @@
     <Compile Include="AdminM.Designer.cs">
       <DependentUpon>AdminM.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMA.Designer.cs">
+      <DependentUpon>AdminMA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMD.Designer.cs">
+      <DependentUpon>AdminMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMU.Designer.cs">
+      <DependentUpon>AdminMU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMVa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMVa.Designer.cs">
+      <DependentUpon>AdminMVa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMVp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMVp.Designer.cs">
+      <DependentUpon>AdminMVp.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminR.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminR.Designer.cs">
       <DependentUpon>AdminR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRA.Designer.cs">
+      <DependentUpon>AdminRA.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminRc.cs">
       <SubType>Form</SubType>
@@ -256,6 +292,24 @@
     </Compile>
     <Compile Include="AdminRcVp.Designer.cs">
       <DependentUpon>AdminRcVp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRD.Designer.cs">
+      <DependentUpon>AdminRD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRU.Designer.cs">
+      <DependentUpon>AdminRU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRVa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRVa.Designer.cs">
+      <DependentUpon>AdminRVa.cs</DependentUpon>
     </Compile>
     <Compile Include="BillClass.cs" />
     <Compile Include="BookingDetailsClass.cs" />
@@ -308,6 +362,24 @@
     </Compile>
     <Compile Include="ManagerHome.Designer.cs">
       <DependentUpon>ManagerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRc.Designer.cs">
+      <DependentUpon>ManagerRc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRcVa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRcVa.Designer.cs">
+      <DependentUpon>ManagerRcVa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRcVp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRcVp.Designer.cs">
+      <DependentUpon>ManagerRcVp.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -422,8 +494,26 @@
     <EmbeddedResource Include="AdminM.resx">
       <DependentUpon>AdminM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminMA.resx">
+      <DependentUpon>AdminMA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMD.resx">
+      <DependentUpon>AdminMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMU.resx">
+      <DependentUpon>AdminMU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMVa.resx">
+      <DependentUpon>AdminMVa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMVp.resx">
+      <DependentUpon>AdminMVp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminR.resx">
       <DependentUpon>AdminR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRA.resx">
+      <DependentUpon>AdminRA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRc.resx">
       <DependentUpon>AdminRc.cs</DependentUpon>
@@ -443,6 +533,15 @@
     <EmbeddedResource Include="AdminRcVp.resx">
       <DependentUpon>AdminRcVp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminRD.resx">
+      <DependentUpon>AdminRD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRU.resx">
+      <DependentUpon>AdminRU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRVa.resx">
+      <DependentUpon>AdminRVa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guest.resx">
       <DependentUpon>Guest.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,6 +556,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerHome.resx">
+      <DependentUpon>ManagerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRc.resx">
+      <DependentUpon>ManagerRc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRcVa.resx">
+      <DependentUpon>ManagerRcVa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRcVp.resx">
+      <DependentUpon>ManagerRcVp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
