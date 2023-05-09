@@ -50,7 +50,7 @@ namespace HotelMS
             label12.Hide();
             label13.Hide();
 
-            string tagValue = this.TagValue;
+            string TagValue = this.TagValue;
             string connString = "server = localhost ;" +
           " uid=root;" +
           " pwd = '' ; " +
@@ -59,7 +59,7 @@ namespace HotelMS
             string query = "UPDATE rooms set rStatus=True WHERE rID=@rID";
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
-            command.Parameters.AddWithValue("@rID",tagValue);
+            command.Parameters.AddWithValue("@rID",TagValue);
             command.ExecuteNonQuery();
             conn.Close();
 
@@ -68,7 +68,7 @@ namespace HotelMS
            
             conn1.Open();
             MySqlCommand command1 = new MySqlCommand(query1, conn1);
-            command1.Parameters.AddWithValue("@rID", tagValue);
+            command1.Parameters.AddWithValue("@rID", TagValue);
             MySqlDataReader reader = command1.ExecuteReader();
             while (reader.Read())
             {
@@ -154,7 +154,7 @@ namespace HotelMS
             conn3.Open();
             MySqlCommand command3 = new MySqlCommand(query3, conn3);
             command3.Parameters.AddWithValue("@bID", textBox1.Text);
-            command3.Parameters.AddWithValue("@bDate", label13 );  
+            command3.Parameters.AddWithValue("@bDate", label13.Text );  
             command3.Parameters.AddWithValue("@bAmount", txtFine.Text);
             command3.Parameters.AddWithValue("@bFine", txtFine.Text);
             command3.Parameters.AddWithValue("@totalAmount", txtTotal.Text);
