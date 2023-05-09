@@ -159,7 +159,7 @@ namespace HotelMS
             command3.Parameters.AddWithValue("@bFine", txtFine.Text);
             command3.Parameters.AddWithValue("@totalAmount", txtTotal.Text);
             command3.Parameters.AddWithValue("@bkID",txtkID.Text );
-            MySqlDataReader reader3 = command3.ExecuteReader();
+            command3.ExecuteNonQuery();
             conn3.Close();
             MessageBox.Show("Successfully Checked Out");
         }
