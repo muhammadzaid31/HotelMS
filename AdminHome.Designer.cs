@@ -96,7 +96,7 @@
             this.Controls.Add(this.btnRooms);
             this.Controls.Add(this.btnLogOut);
             this.Name = "AdminHome";
-            this.Text = "AdminHome";
+            this.Text = "FCB";
             this.ResumeLayout(false);
 
         }

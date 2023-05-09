@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtgID = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtgID = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,11 +49,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCODate = new System.Windows.Forms.Label();
             this.txtRprice = new System.Windows.Forms.Label();
             this.txtDuration = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,22 +72,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Details";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(33, 59);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 24);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Enter gID:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(164, 119);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(253, 31);
+            this.textBox1.TabIndex = 6;
+            // 
             // txtgID
             // 
             this.txtgID.Location = new System.Drawing.Point(164, 52);
             this.txtgID.Name = "txtgID";
             this.txtgID.Size = new System.Drawing.Size(253, 31);
             this.txtgID.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(33, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 24);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Enter Bill ID:";
             // 
             // button2
             // 
@@ -99,12 +107,15 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // label6
             // 
-            this.textBox1.Location = new System.Drawing.Point(164, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 31);
-            this.textBox1.TabIndex = 6;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(33, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 24);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Enter Bill ID:";
             // 
             // label9
             // 
@@ -257,16 +268,6 @@
             this.label10.TabIndex = 15;
             this.label10.Text = "Bill ID:";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(33, 59);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 24);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Enter gID:";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -306,11 +307,22 @@
             this.txtDuration.TabIndex = 33;
             this.txtDuration.Text = "label8";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(669, 247);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 24);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "label8";
+            // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 678);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDuration);
             this.Controls.Add(this.txtRprice);
             this.Controls.Add(this.label12);
@@ -368,5 +380,6 @@
         private System.Windows.Forms.Label txtCODate;
         private System.Windows.Forms.Label txtRprice;
         private System.Windows.Forms.Label txtDuration;
+        private System.Windows.Forms.Label label13;
     }
 }

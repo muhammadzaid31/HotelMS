@@ -48,6 +48,7 @@ namespace HotelMS
             txtDuration.Hide();
             txtCODate.Hide();
             label12.Hide();
+            label13.Hide();
 
             string tagValue = this.TagValue;
             string connString = "server = localhost ;" +
@@ -55,7 +56,7 @@ namespace HotelMS
           " pwd = '' ; " +
           "database = hotel";
             MySqlConnection conn= new MySqlConnection(connString);
-            string query = "UPDATE rooms set rStatus=False WHERE rID=@rID";
+            string query = "UPDATE rooms set rStatus=True WHERE rID=@rID";
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
             command.Parameters.AddWithValue("@rID",tagValue);
@@ -116,37 +117,51 @@ namespace HotelMS
 
                 txtkID.Text = reader2.GetString(0).ToString();
                 txtbD.Text = reader2.GetString(1).ToString();
-                txtCODate.Text = reader2.GetString(2).ToString();
+                label12.Text = reader2.GetString(2).ToString();
                 txtDuration.Text= reader2.GetString(3).ToString();  
             }
             reader2.Close();
             conn2.Close();
 
             string currentDate = DateTime.Now.ToString("dd-MM-yy");
-            DateTime startDate = DateTime.ParseExact(txtCODate.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
+            label13.Text = currentDate;
+            DateTime startDate = DateTime.ParseExact(label12.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
             DateTime endDate = DateTime.ParseExact(currentDate, "dd-MM-yy", CultureInfo.InvariantCulture);
 
             TimeSpan duration = endDate - startDate;
             int numDays = duration.Days;
             int fine;
+            int price = int.Parse(txtRprice.Text) * int.Parse(txtDuration.Text);
+            txtFine.Text = price.ToString();
             if (numDays > 0)
             {
                 fine = numDays * int.Parse(txtRprice.Text);
-                txtFine.Text = fine.ToString(); 
-
+                txtFine.Text = fine.ToString();
+                txtTotal.Text=(int.Parse(txtFine.Text)+int.Parse(txtbA.Text)).ToString();
             }
-            int price = int.Parse(txtRprice.Text) * int.Parse(txtDuration.Text);
-            txtbA.Text = price.ToString();
-
-            /*
+            else 
+            {
+                
+                txtFine.Text="0";
+                txtTotal.Text = txtbA.Text;
+            }
+            txtbID.Text = textBox1.Text;
+            
             MySqlConnection conn3 = new MySqlConnection(connString);
-            string query3 = "";
+            string query3 = "INSERT INTO bill(bID, bDate, bAmount, bFine, totalAmount, bkID) " +
+                "VALUES (@bID,@bDate,@bAmount,@bFine,@totalAmount,@bkID)";
 
             conn3.Open();
             MySqlCommand command3 = new MySqlCommand(query3, conn3);
-            command2.Parameters.AddWithValue("@rID", tagValue);
-            MySqlDataReader reader3 = command2.ExecuteReader();
-            conn3.Close()*/
+            command3.Parameters.AddWithValue("@bID", textBox1.Text);
+            command3.Parameters.AddWithValue("@bDate", label13 );  
+            command3.Parameters.AddWithValue("@bAmount", txtFine.Text);
+            command3.Parameters.AddWithValue("@bFine", txtFine.Text);
+            command3.Parameters.AddWithValue("@totalAmount", txtTotal.Text);
+            command3.Parameters.AddWithValue("@bkID",txtkID.Text );
+            MySqlDataReader reader3 = command3.ExecuteReader();
+            conn3.Close();
+            MessageBox.Show("Successfully Checked Out");
         }
     }
 }
