@@ -313,6 +313,24 @@
     </Compile>
     <Compile Include="BillClass.cs" />
     <Compile Include="BookingDetailsClass.cs" />
+    <Compile Include="CheckAvail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckAvail.Designer.cs">
+      <DependentUpon>CheckAvail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateGuest.Designer.cs">
+      <DependentUpon>CreateGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,7 +374,79 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerBK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBK.Designer.cs">
+      <DependentUpon>ManagerBK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBKD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBKD.Designer.cs">
+      <DependentUpon>ManagerBKD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBKU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBKU.Designer.cs">
+      <DependentUpon>ManagerBKU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerBKVa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBKVa.Designer.cs">
+      <DependentUpon>ManagerBKVa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerClass.cs" />
+    <Compile Include="ManagerG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerG.Designer.cs">
+      <DependentUpon>ManagerG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGA.Designer.cs">
+      <DependentUpon>ManagerGA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGBk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGBk.Designer.cs">
+      <DependentUpon>ManagerGBk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGBkB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGBkB.Designer.cs">
+      <DependentUpon>ManagerGBkB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGD.Designer.cs">
+      <DependentUpon>ManagerGD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGU.Designer.cs">
+      <DependentUpon>ManagerGU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGVa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGVa.Designer.cs">
+      <DependentUpon>ManagerGVa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerGVp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerGVp.Designer.cs">
+      <DependentUpon>ManagerGVp.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +458,24 @@
     </Compile>
     <Compile Include="ManagerRc.Designer.cs">
       <DependentUpon>ManagerRc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRcA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRcA.Designer.cs">
+      <DependentUpon>ManagerRcA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRcD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRcD.Designer.cs">
+      <DependentUpon>ManagerRcD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerRcU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRcU.Designer.cs">
+      <DependentUpon>ManagerRcU.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerRcVa.cs">
       <SubType>Form</SubType>
@@ -542,6 +650,15 @@
     <EmbeddedResource Include="AdminRVa.resx">
       <DependentUpon>AdminRVa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckAvail.resx">
+      <DependentUpon>CheckAvail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateGuest.resx">
+      <DependentUpon>CreateGuest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guest.resx">
       <DependentUpon>Guest.cs</DependentUpon>
     </EmbeddedResource>
@@ -557,11 +674,56 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBK.resx">
+      <DependentUpon>ManagerBK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBKD.resx">
+      <DependentUpon>ManagerBKD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBKU.resx">
+      <DependentUpon>ManagerBKU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBKVa.resx">
+      <DependentUpon>ManagerBKVa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerG.resx">
+      <DependentUpon>ManagerG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGA.resx">
+      <DependentUpon>ManagerGA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGBk.resx">
+      <DependentUpon>ManagerGBk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGBkB.resx">
+      <DependentUpon>ManagerGBkB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGD.resx">
+      <DependentUpon>ManagerGD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGU.resx">
+      <DependentUpon>ManagerGU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGVa.resx">
+      <DependentUpon>ManagerGVa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerGVp.resx">
+      <DependentUpon>ManagerGVp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerHome.resx">
       <DependentUpon>ManagerHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerRc.resx">
       <DependentUpon>ManagerRc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRcA.resx">
+      <DependentUpon>ManagerRcA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRcD.resx">
+      <DependentUpon>ManagerRcD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerRcU.resx">
+      <DependentUpon>ManagerRcU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerRcVa.resx">
       <DependentUpon>ManagerRcVa.cs</DependentUpon>
@@ -578,6 +740,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReceptionistHome.resx">
+      <DependentUpon>ReceptionistHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Royal.resx">
       <DependentUpon>Royal.cs</DependentUpon>
     </EmbeddedResource>

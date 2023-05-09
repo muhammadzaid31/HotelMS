@@ -1,6 +1,6 @@
 ﻿namespace HotelMS
 {
-    partial class AdminMA
+    partial class ManagerRcA
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtmID = new System.Windows.Forms.TextBox();
+            this.txtrcID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,20 +55,6 @@
             this.groupBox1.SuspendLayout();
             this.addReceptionist.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(278, 598);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 41);
-            button2.TabIndex = 5;
-            button2.Text = "Add Manager";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtUsername
             // 
@@ -166,14 +152,14 @@
             this.txtName.Size = new System.Drawing.Size(285, 26);
             this.txtName.TabIndex = 8;
             // 
-            // txtmID
+            // txtrcID
             // 
-            this.txtmID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmID.Location = new System.Drawing.Point(271, 42);
-            this.txtmID.Name = "txtmID";
-            this.txtmID.Size = new System.Drawing.Size(285, 26);
-            this.txtmID.TabIndex = 7;
+            this.txtrcID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtrcID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrcID.Location = new System.Drawing.Point(271, 42);
+            this.txtrcID.Name = "txtrcID";
+            this.txtrcID.Size = new System.Drawing.Size(285, 26);
+            this.txtrcID.TabIndex = 7;
             // 
             // txtPassword
             // 
@@ -192,7 +178,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(135, 17);
+            this.groupBox1.Location = new System.Drawing.Point(119, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(585, 148);
             this.groupBox1.TabIndex = 4;
@@ -273,9 +259,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(54, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter mID:";
+            this.label1.Text = "Enter rcID:";
             // 
             // addReceptionist
             // 
@@ -288,7 +274,7 @@
             this.addReceptionist.Controls.Add(this.txtEmail);
             this.addReceptionist.Controls.Add(this.txtGender);
             this.addReceptionist.Controls.Add(this.txtName);
-            this.addReceptionist.Controls.Add(this.txtmID);
+            this.addReceptionist.Controls.Add(this.txtrcID);
             this.addReceptionist.Controls.Add(this.label7);
             this.addReceptionist.Controls.Add(this.label6);
             this.addReceptionist.Controls.Add(this.label5);
@@ -297,7 +283,7 @@
             this.addReceptionist.Controls.Add(this.label2);
             this.addReceptionist.Controls.Add(this.label1);
             this.addReceptionist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addReceptionist.Location = new System.Drawing.Point(135, 171);
+            this.addReceptionist.Location = new System.Drawing.Point(119, 189);
             this.addReceptionist.Name = "addReceptionist";
             this.addReceptionist.Size = new System.Drawing.Size(585, 421);
             this.addReceptionist.TabIndex = 3;
@@ -315,16 +301,30 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Enter Phone Numer:";
             // 
-            // AdminMA
+            // button2
+            // 
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(262, 616);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 36);
+            button2.TabIndex = 5;
+            button2.Text = "Add Receptionist";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ManagerRcA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 651);
+            this.ClientSize = new System.Drawing.Size(822, 687);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
-            this.Name = "AdminMA";
-            this.Text = "a";
+            this.Name = "ManagerRcA";
+            this.Text = "ManagerRcA";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.addReceptionist.ResumeLayout(false);
@@ -345,7 +345,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtmID;
+        private System.Windows.Forms.TextBox txtrcID;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;

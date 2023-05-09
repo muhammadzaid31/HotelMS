@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,28 +13,20 @@ using MySql.Data.MySqlClient;
 
 namespace HotelMS
 {
-    public partial class ManagerHome : Form
+    public partial class ManagerBK : Form
     {
-        public ManagerHome()
+        public ManagerBK()
         {
             InitializeComponent();
         }
+
         private int uid;
         public int UID
         {
             get { return uid; }
             set { uid = value; }
         }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MessageBox.Show("Successfully logged out");
-            new SignIn().ShowDialog();
-            this.Close();
-        }
-
-        private void ManagerHome_Load(object sender, EventArgs e)
+        private void ManagerBK_Load(object sender, EventArgs e)
         {
             string connString = "server = localhost ;" +
       " uid=root;" +
@@ -59,31 +52,34 @@ namespace HotelMS
             }
         }
 
-        private void btnReceptionists_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerRc myForm = new ManagerRc();
-            myForm.UID = this.UID;
-            myForm.ShowDialog();   
+            new ManagerBK().ShowDialog();
             this.Close();
         }
 
-        private void btnManagers_Click(object sender, EventArgs e)
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerG myForm = new ManagerG();
-            myForm.UID = this.UID;
-            myForm.ShowDialog();
+            MessageBox.Show("Successfully Signed Out");
+            new SignIn().ShowDialog();
             this.Close();
         }
 
-        private void btnRooms_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ManagerBK myForm = new ManagerBK();
-            myForm.UID = this.UID;
-            myForm.ShowDialog();
-            this.Close();
+            new ManagerBKVa().ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ManagerBKU().ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ManagerBKD().ShowDialog();
         }
     }
 }

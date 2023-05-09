@@ -1,6 +1,6 @@
 ﻿namespace HotelMS
 {
-    partial class AdminRcA
+    partial class CreateGuest
     {
         /// <summary>
         /// Required designer variable.
@@ -29,78 +29,29 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button button2;
-            this.addReceptionist = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dtp = new System.Windows.Forms.DateTimePicker();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtrcID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtgID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.addReceptionist = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             button2 = new System.Windows.Forms.Button();
             this.addReceptionist.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(323, 593);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 36);
-            button2.TabIndex = 2;
-            button2.Text = "Add Receptionist";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // addReceptionist
-            // 
-            this.addReceptionist.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addReceptionist.Controls.Add(this.button1);
-            this.addReceptionist.Controls.Add(this.label10);
-            this.addReceptionist.Controls.Add(this.dtp);
-            this.addReceptionist.Controls.Add(this.txtID);
-            this.addReceptionist.Controls.Add(this.txtPhone);
-            this.addReceptionist.Controls.Add(this.txtEmail);
-            this.addReceptionist.Controls.Add(this.txtGender);
-            this.addReceptionist.Controls.Add(this.txtName);
-            this.addReceptionist.Controls.Add(this.txtrcID);
-            this.addReceptionist.Controls.Add(this.label7);
-            this.addReceptionist.Controls.Add(this.label6);
-            this.addReceptionist.Controls.Add(this.label5);
-            this.addReceptionist.Controls.Add(this.label4);
-            this.addReceptionist.Controls.Add(this.label3);
-            this.addReceptionist.Controls.Add(this.label2);
-            this.addReceptionist.Controls.Add(this.label1);
-            this.addReceptionist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addReceptionist.Location = new System.Drawing.Point(180, 166);
-            this.addReceptionist.Name = "addReceptionist";
-            this.addReceptionist.Size = new System.Drawing.Size(585, 421);
-            this.addReceptionist.TabIndex = 0;
-            this.addReceptionist.TabStop = false;
-            this.addReceptionist.Text = "Details";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(271, 368);
+            this.button1.Location = new System.Drawing.Point(271, 333);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(285, 31);
             this.button1.TabIndex = 16;
@@ -113,7 +64,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(54, 374);
+            this.label10.Location = new System.Drawing.Point(54, 339);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(183, 20);
             this.label10.TabIndex = 15;
@@ -127,15 +78,6 @@
             this.dtp.Name = "dtp";
             this.dtp.Size = new System.Drawing.Size(285, 26);
             this.dtp.TabIndex = 14;
-            // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(271, 318);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(285, 26);
-            this.txtID.TabIndex = 13;
             // 
             // txtPhone
             // 
@@ -173,25 +115,14 @@
             this.txtName.Size = new System.Drawing.Size(285, 26);
             this.txtName.TabIndex = 8;
             // 
-            // txtrcID
+            // txtgID
             // 
-            this.txtrcID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtrcID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtrcID.Location = new System.Drawing.Point(271, 42);
-            this.txtrcID.Name = "txtrcID";
-            this.txtrcID.Size = new System.Drawing.Size(285, 26);
-            this.txtrcID.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(54, 321);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Enter ID";
+            this.txtgID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtgID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtgID.Location = new System.Drawing.Point(271, 42);
+            this.txtgID.Name = "txtgID";
+            this.txtgID.Size = new System.Drawing.Size(285, 26);
+            this.txtgID.TabIndex = 7;
             // 
             // label6
             // 
@@ -214,6 +145,31 @@
             this.label5.Size = new System.Drawing.Size(171, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Enter Phone Numer:";
+            // 
+            // addReceptionist
+            // 
+            this.addReceptionist.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addReceptionist.Controls.Add(this.button1);
+            this.addReceptionist.Controls.Add(this.label10);
+            this.addReceptionist.Controls.Add(this.dtp);
+            this.addReceptionist.Controls.Add(this.txtPhone);
+            this.addReceptionist.Controls.Add(this.txtEmail);
+            this.addReceptionist.Controls.Add(this.txtGender);
+            this.addReceptionist.Controls.Add(this.txtName);
+            this.addReceptionist.Controls.Add(this.txtgID);
+            this.addReceptionist.Controls.Add(this.label6);
+            this.addReceptionist.Controls.Add(this.label5);
+            this.addReceptionist.Controls.Add(this.label4);
+            this.addReceptionist.Controls.Add(this.label3);
+            this.addReceptionist.Controls.Add(this.label2);
+            this.addReceptionist.Controls.Add(this.label1);
+            this.addReceptionist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addReceptionist.Location = new System.Drawing.Point(112, 2);
+            this.addReceptionist.Name = "addReceptionist";
+            this.addReceptionist.Size = new System.Drawing.Size(585, 421);
+            this.addReceptionist.TabIndex = 6;
+            this.addReceptionist.TabStop = false;
+            this.addReceptionist.Text = "Details";
             // 
             // label4
             // 
@@ -256,107 +212,55 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(54, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(92, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter rcID:";
+            this.label1.Text = "Enter gID:";
             // 
-            // groupBox1
+            // button2
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(180, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(585, 148);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sign In Credentials";
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(235, 429);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 41);
+            button2.TabIndex = 8;
+            button2.Text = "Add Guest";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(271, 89);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(285, 26);
-            this.txtPassword.TabIndex = 15;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(271, 39);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(285, 26);
-            this.txtUsername.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(54, 95);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 20);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Enter Password:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(54, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 20);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Enter Username:";
-            // 
-            // AdminRcA
+            // CreateGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 652);
-            this.Controls.Add(button2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(800, 502);
             this.Controls.Add(this.addReceptionist);
-            this.Name = "AdminRcA";
-            this.Text = "AdminRcA";
-            this.Load += new System.EventHandler(this.AdminRcA_Load);
+            this.Controls.Add(button2);
+            this.Name = "CreateGuest";
+            this.Text = "CreateGuest";
             this.addReceptionist.ResumeLayout(false);
             this.addReceptionist.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox addReceptionist;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtp;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtrcID;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtgID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox addReceptionist;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
     }
 }

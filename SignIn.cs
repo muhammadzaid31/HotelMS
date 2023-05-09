@@ -45,32 +45,29 @@ namespace HotelMS
                             string username = reader.GetString(1);
                             string password = reader.GetString(2);
                             string role = reader.GetString(3);
-                            if (role == Role)
+                            if (role==Role)
                             {
                                 bool temp = Person.Login(Username, username, Password, password);
                                 if (temp)
                                 {
                                     MessageBox.Show("Successfully Signed in");
                                     this.Hide();
-                                    new ReceptionistHome().ShowDialog();
+                                    ReceptionistHome myForm = new ReceptionistHome();
+                                    myForm.UID = int.Parse(reader.GetString(0));
+                                    myForm.ShowDialog();
                                     this.Close();
-                                    break;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
                                     break;
                                 }
                             }
                         }
-                        conn.Close();
+                        MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
                         break;
                     case "Manager":
                         MySqlConnection conn1 = new MySqlConnection(connString);
                         conn1.Open();
                         MySqlCommand command1 = new MySqlCommand(query, conn1);
                         MySqlDataReader reader1 = command1.ExecuteReader();
-                        int count = 0;
+                        int count2 = 0;
                         while (reader1.Read())
                         {
                             string username = reader1.GetString(1);
@@ -89,12 +86,12 @@ namespace HotelMS
                                     this.Close();
                                     break;
                                 }
-                                count++;
+                                count2++;
 
                             }
 
                         }
-                        if (count != 0)
+                        if (count2 != 0)
                         {
                             MessageBox.Show("Incorrect Credentials, Please Try again or Contact Administrator");
                             conn1.Close();

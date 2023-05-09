@@ -1,6 +1,6 @@
 ﻿namespace HotelMS
 {
-    partial class ManagerRc
+    partial class ManagerG
     {
         /// <summary>
         /// Required designer variable.
@@ -53,8 +53,8 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(172, 485);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(172, 450);
+            this.flowLayoutPanel1.TabIndex = 9;
             // 
             // back
             // 
@@ -132,43 +132,43 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(421, 300);
+            this.label2.Location = new System.Drawing.Point(401, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 24);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Welcome";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(546, 300);
+            this.label1.Location = new System.Drawing.Point(526, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 24);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 11;
             this.label1.Text = "label1";
             // 
             // pfp1
             // 
-            this.pfp1.Location = new System.Drawing.Point(395, 27);
+            this.pfp1.Location = new System.Drawing.Point(375, 28);
             this.pfp1.Name = "pfp1";
             this.pfp1.Size = new System.Drawing.Size(257, 244);
             this.pfp1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pfp1.TabIndex = 6;
+            this.pfp1.TabIndex = 10;
             this.pfp1.TabStop = false;
             // 
-            // ManagerRc
+            // ManagerG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 485);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pfp1);
-            this.Name = "ManagerRc";
-            this.Text = "ManagerRc";
-            this.Load += new System.EventHandler(this.ManagerRc_Load);
+            this.Name = "ManagerG";
+            this.Text = "ManagerG";
+            this.Load += new System.EventHandler(this.ManagerG_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pfp1)).EndInit();
             this.ResumeLayout(false);

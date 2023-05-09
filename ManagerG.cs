@@ -12,12 +12,13 @@ using MySql.Data.MySqlClient;
 
 namespace HotelMS
 {
-    public partial class ManagerHome : Form
+    public partial class ManagerG : Form
     {
-        public ManagerHome()
+        public ManagerG()
         {
             InitializeComponent();
         }
+
         private int uid;
         public int UID
         {
@@ -25,16 +26,9 @@ namespace HotelMS
             set { uid = value; }
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e)
+        private void ManagerG_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            MessageBox.Show("Successfully logged out");
-            new SignIn().ShowDialog();
-            this.Close();
-        }
 
-        private void ManagerHome_Load(object sender, EventArgs e)
-        {
             string connString = "server = localhost ;" +
       " uid=root;" +
       " pwd = '' ; " +
@@ -59,31 +53,42 @@ namespace HotelMS
             }
         }
 
-        private void btnReceptionists_Click(object sender, EventArgs e)
+        private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerRc myForm = new ManagerRc();
-            myForm.UID = this.UID;
-            myForm.ShowDialog();   
-            this.Close();
-        }
-
-        private void btnManagers_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManagerG myForm = new ManagerG();
+            ManagerHome myForm= new ManagerHome();
             myForm.UID = this.UID;
             myForm.ShowDialog();
             this.Close();
+
         }
 
-        private void btnRooms_Click(object sender, EventArgs e)
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerBK myForm = new ManagerBK();
-            myForm.UID = this.UID;
-            myForm.ShowDialog();
+            MessageBox.Show("Successfully Signed Out");
+            new SignIn().ShowDialog();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new ManagerGA().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new ManagerGVa().ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ManagerGD().ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ManagerGU().ShowDialog();
         }
     }
 }

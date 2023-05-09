@@ -163,5 +163,15 @@ namespace HotelMS
             pB1.Image = bmp;
 
         }
+
+        private void AdminRcU_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addReceptionist_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

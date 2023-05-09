@@ -4,22 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.Ocsp;
-using static System.Net.WebRequestMethods;
-using static LinqToDB.Reflection.Methods.LinqToDB;
-using static LinqToDB.Sql;
 
 namespace HotelMS
 {
-    public partial class AdminRcD : Form
+    public partial class ManagerRcD : Form
     {
-        public AdminRcD()
+        public ManagerRcD()
         {
             InitializeComponent();
         }
@@ -59,16 +53,6 @@ namespace HotelMS
                 MessageBox.Show("Receptionist Account Succesfully Deleted");
                 this.Close();
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRcid_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

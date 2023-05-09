@@ -70,15 +70,26 @@ namespace HotelMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             new ManagerRcVa().ShowDialog();
-            this.Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Close();
+            
+            new ManagerRcA().ShowDialog(); 
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new ManagerRcU().ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ManagerRcD().ShowDialog();
         }
     }
 }

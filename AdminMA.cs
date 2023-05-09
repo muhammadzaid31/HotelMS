@@ -82,7 +82,7 @@ namespace HotelMS
             command.Parameters.AddWithValue("@Role", "Manager");
             string query1 = "INSERT INTO `managers`(`mID`, `Name`, `DoB`, `Gender`, `Phone`, " +
                 "`Email`, `ID`, `mProfilePic`) " +
-                "VALUES (@mID,@mName,@mDob,@mGender,@mPhone,@mEmail,@ID1,@mProfilePic)";
+                "VALUES (@mID,@mName,@mDoB,@mGender,@mPhone,@mEmail,@ID1,@mProfilePic)";
             command.ExecuteNonQuery();
             MySqlCommand command1 = new MySqlCommand(query1, conn);
             command1.Parameters.AddWithValue("@mID", m1.MID);

@@ -77,6 +77,7 @@
             this.btnManagers.TabIndex = 7;
             this.btnManagers.Text = "GUESTS";
             this.btnManagers.UseVisualStyleBackColor = false;
+            this.btnManagers.Click += new System.EventHandler(this.btnManagers_Click);
             // 
             // btnReceptionists
             // 
@@ -102,6 +103,7 @@
             this.btnRooms.TabIndex = 5;
             this.btnRooms.Text = "BOOKING DETAILS";
             this.btnRooms.UseVisualStyleBackColor = false;
+            this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
             // 
             // btnLogOut
             // 
