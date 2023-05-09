@@ -2,18 +2,19 @@
 FCB HotelMS is hotel management system that makes the daily operations of a hotel easier and makes storing the hotel data more efficient.
 
 # Description 
-
+The FCB HotelMS will mainly be used by 4 types of users. The Guests, Receptionists, Managers, and Admins. The guest can browse thorugh the different types of rooms inthe hotel. The receptionist can create bookings , delete bookings, view all the booking details and to create new guest profiles. The admin can create, view all, update, delete managers,receptionists accounts and rooms from the database.
 
 # Installation 
-Install the latest version of c#
+Install the latest version of visual studio and Xampp on windows OS. Clone the repository in visual studio. Start a MySql server on xampp. Download the SQL file in the repository. Open myPHPAdmin and import the SQL file there and run the program on visual studio. Make sure visual studio has MySql.Data package installed from NuGet Packet Manager.
 
 # Support 
 Feel free to reach out on email on muhammadzaid312003@gmail.com if you have an queries regarding the application or its installation.
 
 # License
-[](https"//choosealicense.com/licenses/mit/)
+[MIT](https"//choosealicense.com/licenses/mit/)
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+of this software and associated documentation files FCB HotelMS, to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
