@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HotelMS.Person">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACgAAAIgAQAiAAEAIAAAAAQAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelMS.GuestClass">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAIQAAAAAgAAAAIAAIAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GuestClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelMS.ReceptionistClass">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAABASAAgY=</HashCode>
+      <FileName>ReceptionistClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelMS.AdminClass">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ReceptionistClass" Type="HotelMS.ReceptionistClass">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.098" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gQAAAAEAAAAAgACIAAAAgAgCAAAAAgAAAAAAAAAAAgA=</HashCode>
+      <FileName>AdminClass.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReceptionistClass" />
+      <Property Name="ManagerClass" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HotelMS.ManagerClass">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAIQAAiAAIAAAAAAAAAAAAAAAAAAAAAAAAAhA=</HashCode>
+      <FileName>ManagerClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelMS.BillClass">
+    <Position X="1" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ReceptionistClass" Type="HotelMS.ReceptionistClass">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-3.328" Y="0.681" Height="0.182" Width="1.41" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAIIAAgAaAAAACAAACgAAAAgAAAAAAAACAAAgAACA=</HashCode>
+      <FileName>BillClass.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReceptionistClass" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HotelMS.RoomClass">
+    <Position X="3.5" Y="6.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="ReceptionistClass" Type="HotelMS.ReceptionistClass">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.423" Y="0.335" Height="0.182" Width="0.926" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AdminClass" Type="HotelMS.AdminClass">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.029" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAQAAAQAAAAAAAIAggACAYAAAAAAAABAAAAAwAAA=</HashCode>
+      <FileName>RoomClass.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReceptionistClass" />
+      <Property Name="AdminClass" />
+      <Property Name="BookingDetailsClass" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HotelMS.BookingDetailsClass">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="BillClass" Type="HotelMS.BillClass" ManuallyRouted="true">
+      <Path>
+        <Point X="6.75" Y="6.641" />
+        <Point X="5.348" Y="6.641" />
+        <Point X="5.348" Y="10.159" />
+        <Point X="2.963" Y="10.159" />
+        <Point X="2.963" Y="6.641" />
+        <Point X="2.5" Y="6.641" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.377" Y="-3.33" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>hCAAEAQAgAAAAQAAAAECgAAAAgAAgAIAAACAABCgQBA=</HashCode>
+      <FileName>BookingDetailsClass.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ManagerClass" />
+      <Property Name="ReceptionistClass" />
+      <Property Name="BillClass" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

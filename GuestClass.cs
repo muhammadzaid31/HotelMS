@@ -45,5 +45,10 @@ namespace HotelMS
             NoV = nov;
             GProfilePic = gProfilePic;
         }
+
+        public static void BrowseRooms() 
+        {
+
+        }
     }
 }

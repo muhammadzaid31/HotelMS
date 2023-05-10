@@ -134,9 +134,9 @@ namespace HotelMS
             command.Parameters.AddWithValue("@User", rcUsername);
             command.Parameters.AddWithValue("@Pass", rcPassword);
             command.Parameters.AddWithValue("@Role", "Receptionist");
+            command.ExecuteNonQuery();
             string query1 = "Update Receptionists SET rcID=@rcID, Name=@rcName, DoB=@rcDoB, Gender = @rcGender, " +
                 "Phone=@rcPhone,Email=@rcEmail, ID = @ID1, rcProfilePic=@rcProfilePic WHERE ID=@ID1";
-            command.ExecuteNonQuery();
             MySqlCommand command1 = new MySqlCommand(query1, conn);
             command1.Parameters.AddWithValue("@rcID", rc1.RCID);
             command1.Parameters.AddWithValue("@rcName", rc1.Name);

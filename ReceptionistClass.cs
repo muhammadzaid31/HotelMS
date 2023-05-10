@@ -45,5 +45,15 @@ namespace HotelMS
             ID = id;
             RProfilePic = rProfilePic;
         }
+
+        public static void DisplayReceptionists() 
+        {
+
+        }
+
+        public static void CreateBooking() 
+        {
+
+        }
     }
 }

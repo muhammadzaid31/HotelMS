@@ -6,40 +6,54 @@ using System.Threading.Tasks;
 
 namespace HotelMS
 {
-    internal class RoomClass
+    public class RoomClass
     {
         private string rID;
         private string rType;
         private int rPrice;
         private bool rStatus;
 
-        public string RID 
-        {
-            get { return rID; }
-            set { rID = value; }    
-        }
-        public string RType 
-        {
-            get {return rType; }
-            set { rType = value; }    
-        }
-        public int RPrice 
-        {
-            get { return rPrice; }
-            set { rPrice = value; }
-        }
+        public string RID { get; set; }
+        public string RType { get; set; }
+        public int RPrice { get; set; }
+        public bool RStatus { get; set; }
         
-        public bool RStatus 
+
+
+        public ReceptionistClass ReceptionistClass
         {
-            get { return rStatus; }
-            set { rStatus = value; }
+            get => default;
+            set
+            {
+            }
         }
+
+        public AdminClass AdminClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public BookingDetailsClass BookingDetailsClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public RoomClass(string rID, string rType, int rPrice, bool rStatus) 
         {
             RID = rID;
             RType = rType;
             RPrice = rPrice;
             RStatus = rStatus;
+        }
+        public static void ViewRooms() 
+        {
+
         }
     }
 }

@@ -43,5 +43,18 @@ namespace HotelMS
             ID = id;
             MProfilePic = mProfilePic;
         }
+        public static void ViewBookingDetails()
+        {
+
+        }
+        public static void AddGuest()
+        {
+
+        }
+
+        public static void AddReceptionist()
+        {
+
+        }
     }
 }

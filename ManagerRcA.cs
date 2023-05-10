@@ -83,10 +83,11 @@ namespace HotelMS
             command.Parameters.AddWithValue("@User", rcUsername);
             command.Parameters.AddWithValue("@Pass", rcPassword);
             command.Parameters.AddWithValue("@Role", "Receptionist");
+
+            command.ExecuteNonQuery();
             string query1 = "INSERT INTO `receptionists`(`rcID`, `Name`, `DoB`, `Gender`, `Phone`, " +
                 "`Email`, `ID`, `rcProfilePic`) " +
                 "VALUES (@rcID,@rcName,@rcDob,@rcGender,@rcPhone,@rcEmail,@ID1,@rcProfilePic)";
-            command.ExecuteNonQuery();
             MySqlCommand command1 = new MySqlCommand(query1, conn);
             command1.Parameters.AddWithValue("@rcID", rc1.RCID);
             command1.Parameters.AddWithValue("@rcName", rc1.Name);

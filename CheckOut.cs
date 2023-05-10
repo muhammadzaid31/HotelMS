@@ -98,30 +98,30 @@ namespace HotelMS
             label12.Show();
 
             string gID = txtgID.Text.ToString();
-            string connString = "server = localhost ;" +
-          " uid=root;" +
-          " pwd = '' ; " +
-          "database = hotel";
-            MySqlConnection conn2 = new MySqlConnection(connString);
-            string query2 = "Select bkID,bkDate,checkOutDate,bkDuration from bookingdetails WHERE rID=@roID and gID=@gID";
+            string connString = "server=localhost;uid=root;pwd='';database=hotel";
+            string query = "SELECT bkID, bkDate, checkOutDate, bkDuration FROM bookingdetails WHERE rID = @roID AND gID = @gID";
 
-            conn2.Open();
-            MySqlCommand command2 = new MySqlCommand(query2, conn2);
-            command2.Parameters.AddWithValue("@roID", tagValue);
-            command2.Parameters.AddWithValue("@gID", gID);
-            MySqlDataReader reader2 = command2.ExecuteReader();
-            while (reader2.Read())
+            using (var connection = new MySqlConnection(connString))
             {
+                connection.Open();
 
-                txtkID.Text = reader2.GetString(0).ToString();
-                txtbD.Text = reader2.GetString(1).ToString();
-                label12.Text = reader2.GetString(2).ToString();
-                txtDuration.Text= reader2.GetString(3).ToString();  
-            }
-            reader2.Close();
-            conn2.Close();
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@roID", tagValue);
+                    command.Parameters.AddWithValue("@gID", gID);
 
-        
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtkID.Text = reader.GetString(0);
+                            txtbD.Text = reader.GetString(1);
+                            label12.Text = reader.GetString(2);
+                            txtDuration.Text = reader.GetString(3);
+                        }
+                    }
+                }
+            }      
             label13.Text = DateTime.Now.ToString("dd-MM-yy");
             DateTime startDate = DateTime.ParseExact(label12.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
             DateTime endDate = DateTime.ParseExact(label13.Text, "dd-MM-yy", CultureInfo.InvariantCulture);

@@ -26,37 +26,10 @@ namespace HotelMS
            " pwd = '' ; " +
            "database = hotel";
 
-            string query = "SELECT * FROM Rooms WHERE rStatus=False";
+          
+
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader = command.ExecuteReader();
-            ArrayList ListrID = new ArrayList();
-            ArrayList ListrType = new ArrayList();
-            ArrayList ListrPrice = new ArrayList();
-            ArrayList ListrStatus = new ArrayList();
-            while (reader.Read())
-            {
-                ListrID.Add(reader["rID"].ToString());
-                ListrType.Add(reader["rType"].ToString());
-                ListrPrice.Add(reader["rPrice"].ToString());
-                ListrStatus.Add(reader["rStatus"].ToString());
-
-            }
-            oRooms.Rows.Clear();
-            for (int i = 0; i < ListrID.Count; i++)
-            {
-                DataGridViewRow newRow = new DataGridViewRow();
-
-                newRow.CreateCells(oRooms);
-                newRow.Cells[0].Value = ListrID[i];
-                newRow.Cells[1].Value = ListrType[i];
-                newRow.Cells[2].Value = ListrPrice[i];
-                newRow.Cells[3].Value = ListrStatus[i];
-                oRooms.Rows.Add(newRow);
-            }
-            reader.Close();
-            
             string query1 = "SELECT * FROM Rooms WHERE rStatus=True";
             
          

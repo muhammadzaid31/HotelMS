@@ -14,67 +14,94 @@ namespace HotelMS
         private string checkOutDate;
         private int bkDuration;
         private string rID;
-        private string rcID; 
+        private string rcID;
         private string mID;
         private string gID;
 
-        public string BkID 
+        public string BkID
         {
             get { return bkID; }
             set { bkID = value; }
         }
-        public string BkDate 
+        public string BkDate
         {
-            get {return bkDate; }
+            get { return bkDate; }
             set { bkDate = value; }
         }
-        public string CheckOutDate 
+        public string CheckOutDate
         {
-            get {return checkOutDate; }
-            set {checkOutDate = value;}
+            get { return checkOutDate; }
+            set { checkOutDate = value; }
         }
-        public int BkDuration 
+        public int BkDuration
         {
             get { return bkDuration; }
             set { bkDuration = value; }
-            
+
         }
-        public string RID 
+        public string RID
         {
             get { return rID; }
             set { rID = value; }
         }
-        public string RCID 
+        public string RCID
         {
             get { return rcID; }
-            set { rcID = value; }        
+            set { rcID = value; }
         }
-        public string MID 
+        public string MID
         {
             get { return mID; }
-            set { mID = value; }      
+            set { mID = value; }
         }
-        public string GID 
+        public string GID
         {
             get { return gID; }
             set { gID = value; }
         }
 
+        public ManagerClass ManagerClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
+        public ReceptionistClass ReceptionistClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
-        public BookingDetailsClass(string bkID, string bkDate, 
-                                   string checkOutDate, int bkDuration, 
-                                   string rID, string rcID , 
-                                   string mID,string gID) 
+        public BillClass BillClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public BookingDetailsClass(string bkID, string bkDate,
+                                   string checkOutDate, int bkDuration,
+                                   string rID, string rcID,
+                                   string mID, string gID)
         {
             BkID = bkID;
             BkDate = bkDate;
             CheckOutDate = checkOutDate;
             BkDuration = bkDuration;
-            RID = rID;  
+            RID = rID;
             RCID = rcID;
             MID = mID;
             GID = gID;
+        }
+
+        public static void UpdateBookingDetails ()
+        {
+
         }
     }
 }

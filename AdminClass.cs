@@ -29,6 +29,23 @@ namespace HotelMS
             get { return aProfilePic; }
             set { aProfilePic = value; }
         }
+
+        public ReceptionistClass ReceptionistClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public ManagerClass ManagerClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public AdminClass(string aID, string name,
                                  string dob, string gender,
                                  string pNumber, string email, int id, byte[] aProfilePic)
@@ -42,6 +59,19 @@ namespace HotelMS
             Email = email;
             ID = id;
             AProfilePic = aProfilePic;
+        }
+        public static void AddRoom()
+        {
+
+        }
+        public static void AddManager()
+        {
+
+        }
+
+        public static void AddReceptionist()
+        {
+
         }
     }
 }

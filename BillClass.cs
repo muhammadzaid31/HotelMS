@@ -23,14 +23,26 @@ namespace HotelMS
 
         public string BDate
         {
-            get { return bDate; }
-            set { bDate = value; }
+            get
+            {
+                return bDate;
+            }
+            set
+            {
+                bDate = value;
+            }
         }
 
         public int BAmount
         {
-            get { return bAmount; }
-            set { bAmount = value; }
+            get
+            {
+                return bAmount;
+            }
+            set
+            {
+                bAmount = value;
+            }
         }
         public int BFine
         {
@@ -49,7 +61,16 @@ namespace HotelMS
             get { return bkID; }
             set { bkID = value; }
         }
-        public BillClass(string bID, string bDate, int bAmount, int bFine, int bTotal, string bkID) 
+
+        public ReceptionistClass ReceptionistClass
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public BillClass(string bID, string bDate, int bAmount, int bFine, int bTotal, string bkID)
         {
             BID = bID;
             BDate = bDate;
@@ -58,5 +79,10 @@ namespace HotelMS
             BTotal = bTotal;
             BkID = bkID;
         }
+
+        public static void CalculateBill ()
+       {
+
+       }
     }
 }
