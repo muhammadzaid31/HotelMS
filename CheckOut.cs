@@ -50,33 +50,31 @@ namespace HotelMS
             label12.Hide();
             label13.Hide();
 
-            string TagValue = this.TagValue;
             string connString = "server = localhost ;" +
           " uid=root;" +
           " pwd = '' ; " +
           "database = hotel";
-            MySqlConnection conn= new MySqlConnection(connString);
-            string query = "UPDATE rooms set rStatus=True WHERE rID=@rID";
-            conn.Open();
-            MySqlCommand command = new MySqlCommand(query, conn);
-            command.Parameters.AddWithValue("@rID",TagValue);
-            command.ExecuteNonQuery();
-            conn.Close();
-
-            MySqlConnection conn1 = new MySqlConnection(connString);
-            string query1 = "Select rPrice from rooms WHERE rID=@rID";
-           
-            conn1.Open();
-            MySqlCommand command1 = new MySqlCommand(query1, conn1);
-            command1.Parameters.AddWithValue("@rID", TagValue);
-            MySqlDataReader reader = command1.ExecuteReader();
-            while (reader.Read())
+            using (MySqlConnection conn = new MySqlConnection(connString))
             {
+                conn.Open();
+                using (MySqlCommand command = new MySqlCommand("UPDATE rooms SET rStatus = True WHERE rID = @rID", conn))
+                {
+                    command.Parameters.AddWithValue("@rID", TagValue);
+                    command.ExecuteNonQuery();
+                }
 
-                txtRprice.Text = reader.GetString(0).ToString() ;
+                using (MySqlCommand command = new MySqlCommand("SELECT rPrice FROM rooms WHERE rID = @rID", conn))
+                {
+                    command.Parameters.AddWithValue("@rID", TagValue);
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtRprice.Text = reader.GetString(0);
+                        }
+                    }
+                }
             }
-            reader.Close();
-            conn1.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -123,10 +121,10 @@ namespace HotelMS
             reader2.Close();
             conn2.Close();
 
-            string currentDate = DateTime.Now.ToString("dd-MM-yy");
-            label13.Text = currentDate;
+        
+            label13.Text = DateTime.Now.ToString("dd-MM-yy");
             DateTime startDate = DateTime.ParseExact(label12.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
-            DateTime endDate = DateTime.ParseExact(currentDate, "dd-MM-yy", CultureInfo.InvariantCulture);
+            DateTime endDate = DateTime.ParseExact(label13.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
 
             TimeSpan duration = endDate - startDate;
             int numDays = duration.Days;
@@ -143,7 +141,9 @@ namespace HotelMS
             {
                 
                 txtFine.Text="0";
-                txtTotal.Text = txtbA.Text;
+                txtbA.Text= price.ToString();
+                txtTotal.Text = txtbA.Text; 
+                
             }
             txtbID.Text = textBox1.Text;
             

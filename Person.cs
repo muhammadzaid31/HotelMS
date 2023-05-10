@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace HotelMS
 {
-    internal class Person
+    public class Person
     {
         private string name;
         private string dob;

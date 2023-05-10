@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelMS
 {
-    internal class ManagerClass : Person
+    public class ManagerClass : Person
     {
         private string mID;
         private int id;

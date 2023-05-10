@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelMS
 {
-    internal class BookingDetailsClass
+    public class BookingDetailsClass
     {
         private string bkID;
         private string bkDate;

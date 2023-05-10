@@ -22,7 +22,7 @@ namespace HotelMS
         private OpenFileDialog openFileDialog1 = new OpenFileDialog();
         public byte[] imageData;
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        public void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
@@ -43,7 +43,7 @@ namespace HotelMS
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             string rcID = txtrcID.Text;
             string rcName = txtName.Text;
@@ -100,6 +100,11 @@ namespace HotelMS
             MessageBox.Show("Successfully created Receptionist account");
             conn.Close();
             this.Close();
+        }
+
+        private void ManagerRcA_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

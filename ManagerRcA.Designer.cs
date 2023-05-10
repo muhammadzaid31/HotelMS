@@ -56,6 +56,20 @@
             this.addReceptionist.SuspendLayout();
             this.SuspendLayout();
             // 
+            // button2
+            // 
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(262, 616);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 36);
+            button2.TabIndex = 5;
+            button2.Text = "Add Receptionist";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // txtUsername
             // 
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -301,20 +315,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Enter Phone Numer:";
             // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(262, 616);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 36);
-            button2.TabIndex = 5;
-            button2.Text = "Add Receptionist";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // ManagerRcA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +325,7 @@
             this.Controls.Add(button2);
             this.Name = "ManagerRcA";
             this.Text = "ManagerRcA";
+            this.Load += new System.EventHandler(this.ManagerRcA_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.addReceptionist.ResumeLayout(false);

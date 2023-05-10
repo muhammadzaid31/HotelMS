@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace HotelMS
 {
-    internal class BillClass
+    public class BillClass
     {
         private string bID;
-        private int bAmount;
         private string bDate;
+        private int bAmount;
+        private int bFine;
+        private int bTotal;
         private string bkID;
 
         public string BID
@@ -19,16 +21,27 @@ namespace HotelMS
             set { bID = value; }
         }
 
+        public string BDate
+        {
+            get { return bDate; }
+            set { bDate = value; }
+        }
+
         public int BAmount
         {
             get { return bAmount; }
             set { bAmount = value; }
         }
-
-        public string BDate
+        public int BFine
         {
-            get { return bDate; }
-            set { bDate = value; }
+            get { return bFine; }
+            set { bFine = value; }
+        }
+
+        public int BTotal
+        {
+            get { return bTotal; }
+            set { bTotal = value; }
         }
 
         public string BkID
@@ -36,11 +49,13 @@ namespace HotelMS
             get { return bkID; }
             set { bkID = value; }
         }
-        public BillClass(string bID, int bAmount, string bDate, string bkID) 
+        public BillClass(string bID, string bDate, int bAmount, int bFine, int bTotal, string bkID) 
         {
             BID = bID;
-            BAmount = bAmount; 
             BDate = bDate;
+            BAmount = bAmount;
+            BFine = bFine;
+            BTotal = bTotal;
             BkID = bkID;
         }
     }

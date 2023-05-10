@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace HotelMS
 {
-    internal class ReceptionistClass : Person
+    public class ReceptionistClass : Person
     {
         private string rcID;
         private int id;
