@@ -24,7 +24,8 @@ namespace TestProject
             byte[] rProfilePic = new byte[0];
 
             // Act
-            ReceptionistClass receptionist = new ReceptionistClass(rcID, name, dob, gender, pNumber, email, id, rProfilePic);
+            ReceptionistClass receptionist = new ReceptionistClass(rcID, name, dob, gender, 
+                pNumber, email, id, rProfilePic);
 
             // Assert
             Assert.That(receptionist.RCID, Is.EqualTo(rcID));
@@ -78,7 +79,8 @@ namespace TestProject
             byte[] mProfilePic = new byte[] { 0x00, 0x01, 0x02 };
 
             // Act
-            ManagerClass manager = new ManagerClass(mID, name, dob, gender, pNumber, email, id, mProfilePic);
+            ManagerClass manager = new ManagerClass(mID, name, dob, gender, pNumber, 
+                email, id, mProfilePic);
 
             // Assert
             Assert.That(manager.MID, Is.EqualTo(mID));
@@ -106,8 +108,8 @@ namespace TestProject
             string gID = "G02";
 
             // Act
-            BookingDetailsClass booking_details = new BookingDetailsClass(bkID, bkDate, checkOutDate, bkDuration,
-                                      rID, rcID, mID, gID);
+            BookingDetailsClass booking_details = new BookingDetailsClass(bkID, bkDate, 
+                checkOutDate, bkDuration,rID, rcID, mID, gID);
 
             // Assert
             Assert.That(booking_details.BkID, Is.EqualTo(bkID));
@@ -143,8 +145,6 @@ namespace TestProject
             Assert.That(booking_details.BFine, Is.EqualTo(bFine));
             Assert.That(booking_details.BTotal, Is.EqualTo(bTotal));
             Assert.That(booking_details.BkID, Is.EqualTo(bkID));
-
-
         }
 
 
