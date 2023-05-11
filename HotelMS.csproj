@@ -372,12 +372,6 @@
     <Compile Include="ManagerBK.Designer.cs">
       <DependentUpon>ManagerBK.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerBKU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManagerBKU.Designer.cs">
-      <DependentUpon>ManagerBKU.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManagerBKVa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -662,9 +656,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerBK.resx">
       <DependentUpon>ManagerBK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManagerBKU.resx">
-      <DependentUpon>ManagerBKU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerBKVa.resx">
       <DependentUpon>ManagerBKVa.cs</DependentUpon>
