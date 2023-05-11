@@ -35,6 +35,7 @@
             // 
             // del
             // 
+            this.del.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.del.BackColor = System.Drawing.Color.LightSteelBlue;
             this.del.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.del.Location = new System.Drawing.Point(212, 162);
@@ -47,6 +48,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(125, 101);
@@ -57,6 +59,7 @@
             // 
             // txtMid
             // 
+            this.txtMid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMid.Location = new System.Drawing.Point(254, 101);
             this.txtMid.Name = "txtMid";
@@ -72,7 +75,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMid);
             this.Name = "AdminMD";
-            this.Text = "AdminMD";
+            this.Text = "FCB HotelMS";
             this.ResumeLayout(false);
             this.PerformLayout();
 

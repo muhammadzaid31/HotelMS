@@ -48,6 +48,20 @@
             this.addReceptionist.SuspendLayout();
             this.SuspendLayout();
             // 
+            // button2
+            // 
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(235, 429);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 41);
+            button2.TabIndex = 8;
+            button2.Text = "Add Guest";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -216,20 +230,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter gID:";
             // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(235, 429);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 41);
-            button2.TabIndex = 8;
-            button2.Text = "Add Guest";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // CreateGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,7 +238,7 @@
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
             this.Name = "CreateGuest";
-            this.Text = "CreateGuest";
+            this.Text = "FCB HotelMS";
             this.addReceptionist.ResumeLayout(false);
             this.addReceptionist.PerformLayout();
             this.ResumeLayout(false);

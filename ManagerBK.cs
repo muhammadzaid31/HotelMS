@@ -69,17 +69,21 @@ namespace HotelMS
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new ManagerBKVa().ShowDialog();
+            this.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new ManagerBKU().ShowDialog();
+            this.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new ManagerBKD().ShowDialog();
+          
         }
     }
 }

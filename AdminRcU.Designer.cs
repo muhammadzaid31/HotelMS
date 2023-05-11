@@ -391,7 +391,7 @@
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
             this.Name = "AdminRcU";
-            this.Text = "AdminRcU";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.AdminRcU_Load);
             this.addReceptionist.ResumeLayout(false);
             this.addReceptionist.PerformLayout();

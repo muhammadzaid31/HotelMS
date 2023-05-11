@@ -101,7 +101,7 @@
             this.btnRooms.Name = "btnRooms";
             this.btnRooms.Size = new System.Drawing.Size(282, 149);
             this.btnRooms.TabIndex = 5;
-            this.btnRooms.Text = "BOOKING DETAILS";
+            this.btnRooms.Text = "VIEW BOOKING DETAILS";
             this.btnRooms.UseVisualStyleBackColor = false;
             this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
             // 

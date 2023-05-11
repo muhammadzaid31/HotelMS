@@ -85,7 +85,7 @@
             this.ClientSize = new System.Drawing.Size(649, 390);
             this.Controls.Add(this.Rooms);
             this.Name = "AdminRVa";
-            this.Text = "AdminRVa";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.AdminRVa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Rooms)).EndInit();
             this.ResumeLayout(false);

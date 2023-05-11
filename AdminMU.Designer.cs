@@ -70,19 +70,6 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(submit);
-            this.groupBox2.Controls.Add(this.txtUID);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(60, -215);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(586, 136);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Enter ID";
-            // 
             // submit
             // 
             submit.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -95,6 +82,47 @@
             submit.TabIndex = 7;
             submit.Text = "Submit RcID";
             submit.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(242, 884);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 36);
+            button2.TabIndex = 9;
+            button2.Text = "Update Manager";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button3.BackColor = System.Drawing.Color.LightBlue;
+            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            button3.Location = new System.Drawing.Point(204, 88);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(134, 33);
+            button3.TabIndex = 7;
+            button3.Text = "Submit mID";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(submit);
+            this.groupBox2.Controls.Add(this.txtUID);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(60, -215);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(586, 136);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Enter ID";
             // 
             // txtUID
             // 
@@ -316,20 +344,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter mID:";
             // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(242, 884);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 36);
-            button2.TabIndex = 9;
-            button2.Text = "Update Manager";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -398,20 +412,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Enter ID";
             // 
-            // button3
-            // 
-            button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button3.BackColor = System.Drawing.Color.LightBlue;
-            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            button3.Location = new System.Drawing.Point(204, 88);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(134, 33);
-            button3.TabIndex = 7;
-            button3.Text = "Submit mID";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // txtmaID
             // 
             this.txtmaID.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -443,7 +443,7 @@
             this.Controls.Add(button2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdminMU";
-            this.Text = "AdminMU";
+            this.Text = "FCB HotelMS";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.addReceptionist.ResumeLayout(false);

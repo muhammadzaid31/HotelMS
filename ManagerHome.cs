@@ -80,10 +80,9 @@ namespace HotelMS
         private void btnRooms_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerBK myForm = new ManagerBK();
-            myForm.UID = this.UID;
+            ManagerBKVa myForm = new ManagerBKVa();
             myForm.ShowDialog();
-            this.Close();
+            this.Show();
         }
     }
 }

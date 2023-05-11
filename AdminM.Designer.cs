@@ -176,7 +176,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pfp1);
             this.Name = "AdminM";
-            this.Text = "FCB";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.AdminM_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pfp1)).EndInit();

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.oRooms = new System.Windows.Forms.DataGridView();
+            this.OrID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.rType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.vRooms = new System.Windows.Forms.DataGridView();
@@ -36,10 +40,6 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.rType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.oRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRooms)).BeginInit();
             this.SuspendLayout();
@@ -61,8 +61,34 @@
             this.oRooms.TabIndex = 3;
             this.oRooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.oRooms_CellContentClick);
             // 
+            // OrID
+            // 
+            this.OrID.HeaderText = "rID";
+            this.OrID.Name = "OrID";
+            this.OrID.ReadOnly = true;
+            this.OrID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // rType
+            // 
+            this.rType.HeaderText = "Room Type";
+            this.rType.Name = "rType";
+            this.rType.ReadOnly = true;
+            // 
+            // rPrice
+            // 
+            this.rPrice.HeaderText = "Room Price";
+            this.rPrice.Name = "rPrice";
+            this.rPrice.ReadOnly = true;
+            // 
+            // rStatus
+            // 
+            this.rStatus.HeaderText = "Room Status";
+            this.rStatus.Name = "rStatus";
+            this.rStatus.ReadOnly = true;
+            // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(296, 29);
@@ -73,6 +99,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(308, 279);
@@ -122,31 +149,6 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // OrID
-            // 
-            this.OrID.HeaderText = "rID";
-            this.OrID.Name = "OrID";
-            this.OrID.ReadOnly = true;
-            this.OrID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // rType
-            // 
-            this.rType.HeaderText = "Room Type";
-            this.rType.Name = "rType";
-            this.rType.ReadOnly = true;
-            // 
-            // rPrice
-            // 
-            this.rPrice.HeaderText = "Room Price";
-            this.rPrice.Name = "rPrice";
-            this.rPrice.ReadOnly = true;
-            // 
-            // rStatus
-            // 
-            this.rStatus.HeaderText = "Room Status";
-            this.rStatus.Name = "rStatus";
-            this.rStatus.ReadOnly = true;
-            // 
             // CheckAvail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,7 +159,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.oRooms);
             this.Name = "CheckAvail";
-            this.Text = "CheckAvail";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.CheckAvail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oRooms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vRooms)).EndInit();

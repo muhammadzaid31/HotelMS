@@ -168,7 +168,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn1);
             this.Name = "Junior";
-            this.Text = "Junior";
+            this.Text = "FCB HotelMS";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

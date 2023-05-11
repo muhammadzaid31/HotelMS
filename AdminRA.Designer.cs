@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.Button button2;
             this.addReceptionist = new System.Windows.Forms.GroupBox();
+            this.cB1 = new System.Windows.Forms.ComboBox();
             this.txtrStatus = new System.Windows.Forms.TextBox();
             this.txtrPrice = new System.Windows.Forms.TextBox();
             this.txtrID = new System.Windows.Forms.TextBox();
@@ -37,10 +38,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cB1 = new System.Windows.Forms.ComboBox();
             button2 = new System.Windows.Forms.Button();
             this.addReceptionist.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(230, 350);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 41);
+            button2.TabIndex = 8;
+            button2.Text = "Add Room";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // addReceptionist
             // 
@@ -60,6 +74,20 @@
             this.addReceptionist.TabIndex = 6;
             this.addReceptionist.TabStop = false;
             this.addReceptionist.Text = "Details";
+            // 
+            // cB1
+            // 
+            this.cB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cB1.FormattingEnabled = true;
+            this.cB1.Items.AddRange(new object[] {
+            "junior",
+            "two",
+            "three",
+            "royal"});
+            this.cB1.Location = new System.Drawing.Point(264, 113);
+            this.cB1.Name = "cB1";
+            this.cB1.Size = new System.Drawing.Size(285, 32);
+            this.cB1.TabIndex = 13;
             // 
             // txtrStatus
             // 
@@ -134,34 +162,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter rID:";
             // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(230, 350);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 41);
-            button2.TabIndex = 8;
-            button2.Text = "Add Room";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // cB1
-            // 
-            this.cB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cB1.FormattingEnabled = true;
-            this.cB1.Items.AddRange(new object[] {
-            "junior",
-            "two",
-            "three",
-            "royal"});
-            this.cB1.Location = new System.Drawing.Point(264, 113);
-            this.cB1.Name = "cB1";
-            this.cB1.Size = new System.Drawing.Size(285, 32);
-            this.cB1.TabIndex = 13;
-            // 
             // AdminRA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,7 +170,7 @@
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
             this.Name = "AdminRA";
-            this.Text = "AdminRA";
+            this.Text = "FCB HotelMS";
             this.addReceptionist.ResumeLayout(false);
             this.addReceptionist.PerformLayout();
             this.ResumeLayout(false);

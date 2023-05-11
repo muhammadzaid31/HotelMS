@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HotelMS
 {
     public class RoomClass
-    {
+    {  
         private string rID;
         private string rType;
         private int rPrice;

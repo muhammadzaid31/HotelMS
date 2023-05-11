@@ -30,6 +30,7 @@
         {
             this.pfp = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rcID = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.Phone = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rcID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Profile";
+            // 
+            // rcID
+            // 
+            this.rcID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rcID.AutoSize = true;
+            this.rcID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rcID.Location = new System.Drawing.Point(432, 65);
+            this.rcID.Name = "rcID";
+            this.rcID.Size = new System.Drawing.Size(60, 24);
+            this.rcID.TabIndex = 15;
+            this.rcID.Text = "label8";
             // 
             // ID
             // 
@@ -220,17 +231,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "rcID:";
             // 
-            // rcID
-            // 
-            this.rcID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rcID.AutoSize = true;
-            this.rcID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rcID.Location = new System.Drawing.Point(432, 65);
-            this.rcID.Name = "rcID";
-            this.rcID.Size = new System.Drawing.Size(60, 24);
-            this.rcID.TabIndex = 15;
-            this.rcID.Text = "label8";
-            // 
             // AdminRcVp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,7 +238,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdminRcVp";
-            this.Text = "AdminRcVp";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.AdminRcVp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).EndInit();
             this.groupBox1.ResumeLayout(false);

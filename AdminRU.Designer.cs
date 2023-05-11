@@ -63,6 +63,34 @@
             button2.Text = "Update Manager";
             button2.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button3.BackColor = System.Drawing.Color.LightBlue;
+            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            button3.Location = new System.Drawing.Point(204, 88);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(134, 33);
+            button3.TabIndex = 7;
+            button3.Text = "Submit rID";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button1.BackColor = System.Drawing.Color.LightBlue;
+            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            button1.Location = new System.Drawing.Point(258, 524);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(215, 33);
+            button1.TabIndex = 18;
+            button1.Text = "Update Room";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // txtrStatus
             // 
             this.txtrStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -93,20 +121,6 @@
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Enter ID";
-            // 
-            // button3
-            // 
-            button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button3.BackColor = System.Drawing.Color.LightBlue;
-            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            button3.Location = new System.Drawing.Point(204, 88);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(134, 33);
-            button3.TabIndex = 7;
-            button3.Text = "Submit rID";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtruID
             // 
@@ -215,20 +229,6 @@
             this.cB1.Size = new System.Drawing.Size(285, 28);
             this.cB1.TabIndex = 13;
             // 
-            // button1
-            // 
-            button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button1.BackColor = System.Drawing.Color.LightBlue;
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            button1.Location = new System.Drawing.Point(258, 524);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(215, 33);
-            button1.TabIndex = 18;
-            button1.Text = "Update Room";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // AdminRU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +239,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.addReceptionist);
             this.Name = "AdminRU";
-            this.Text = "AdminRU";
+            this.Text = "FCB HotelMS";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.addReceptionist.ResumeLayout(false);
