@@ -123,6 +123,7 @@
             this.vRooms.ReadOnly = true;
             this.vRooms.Size = new System.Drawing.Size(444, 236);
             this.vRooms.TabIndex = 6;
+            this.vRooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vRooms_CellContentClick);
             // 
             // VrID
             // 

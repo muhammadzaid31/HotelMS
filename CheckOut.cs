@@ -99,7 +99,7 @@ namespace HotelMS
 
             string gID = txtgID.Text.ToString();
             string connString = "server=localhost;uid=root;pwd='';database=hotel";
-            string query = "SELECT bkID, bkDate, checkOutDate, bkDuration FROM bookingdetails WHERE rID = @roID AND gID = @gID";
+            string query = "SELECT bkID,checkOutDate, bkDuration FROM bookingdetails WHERE rID = @roID AND gID = @gID";
 
             using (var connection = new MySqlConnection(connString))
             {
@@ -115,16 +115,16 @@ namespace HotelMS
                         if (reader.Read())
                         {
                             txtkID.Text = reader.GetString(0);
-                            txtbD.Text = reader.GetString(1);
-                            label12.Text = reader.GetString(2);
-                            txtDuration.Text = reader.GetString(3);
+                            txtbD.Text = DateTime.Now.ToString("dd-MM-yy");
+                            label12.Text = reader.GetString(1);
+                            txtDuration.Text = reader.GetString(2);
                         }
                     }
                 }
             }      
-            label13.Text = DateTime.Now.ToString("dd-MM-yy");
+            
             DateTime startDate = DateTime.ParseExact(label12.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
-            DateTime endDate = DateTime.ParseExact(label13.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
+            DateTime endDate = DateTime.ParseExact(txtbD.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
 
             TimeSpan duration = endDate - startDate;
             int numDays = duration.Days;
@@ -135,6 +135,7 @@ namespace HotelMS
             {
                 fine = numDays * int.Parse(txtRprice.Text);
                 txtFine.Text = fine.ToString();
+                txtbA.Text = price.ToString();
                 txtTotal.Text=(int.Parse(txtFine.Text)+int.Parse(txtbA.Text)).ToString();
             }
             else 

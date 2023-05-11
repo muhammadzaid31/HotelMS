@@ -323,6 +323,12 @@
     <Compile Include="CheckAvail.Designer.cs">
       <DependentUpon>CheckAvail.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +638,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckAvail.resx">
       <DependentUpon>CheckAvail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
