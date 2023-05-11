@@ -324,7 +324,7 @@
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
             this.Name = "ManagerRcA";
-            this.Text = "ManagerRcA";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.ManagerRcA_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

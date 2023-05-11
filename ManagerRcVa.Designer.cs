@@ -109,7 +109,7 @@
             this.ClientSize = new System.Drawing.Size(800, 444);
             this.Controls.Add(this.Receptionists);
             this.Name = "ManagerRcVa";
-            this.Text = "ManagerRcVa";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.ManagerRcVa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Receptionists)).EndInit();
             this.ResumeLayout(false);

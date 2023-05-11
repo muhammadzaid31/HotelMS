@@ -238,7 +238,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "ManagerRcVp";
-            this.Text = "ManagerRcVp";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.ManagerRcVp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).EndInit();
             this.groupBox1.ResumeLayout(false);

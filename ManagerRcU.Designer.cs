@@ -64,6 +64,34 @@
             this.addReceptionist.SuspendLayout();
             this.SuspendLayout();
             // 
+            // submit
+            // 
+            submit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            submit.BackColor = System.Drawing.Color.LightBlue;
+            submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            submit.ForeColor = System.Drawing.SystemColors.ControlText;
+            submit.Location = new System.Drawing.Point(204, 88);
+            submit.Name = "submit";
+            submit.Size = new System.Drawing.Size(134, 33);
+            submit.TabIndex = 7;
+            submit.Text = "Submit RcID";
+            submit.UseVisualStyleBackColor = false;
+            submit.Click += new System.EventHandler(this.submit_Click);
+            // 
+            // button2
+            // 
+            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            button2.BackColor = System.Drawing.Color.LightBlue;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            button2.Location = new System.Drawing.Point(198, 844);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(305, 36);
+            button2.TabIndex = 9;
+            button2.Text = "Update Receptionist";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -87,20 +115,6 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enter ID";
-            // 
-            // submit
-            // 
-            submit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            submit.BackColor = System.Drawing.Color.LightBlue;
-            submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            submit.ForeColor = System.Drawing.SystemColors.ControlText;
-            submit.Location = new System.Drawing.Point(204, 88);
-            submit.Name = "submit";
-            submit.Size = new System.Drawing.Size(134, 33);
-            submit.TabIndex = 7;
-            submit.Text = "Submit RcID";
-            submit.UseVisualStyleBackColor = false;
-            submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // txtUID
             // 
@@ -366,20 +380,6 @@
             this.label10.TabIndex = 15;
             this.label10.Text = "Upload Profile Picture";
             // 
-            // button2
-            // 
-            button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            button2.BackColor = System.Drawing.Color.LightBlue;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(198, 844);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(305, 36);
-            button2.TabIndex = 9;
-            button2.Text = "Update Receptionist";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // ManagerRcU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,7 +390,7 @@
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
             this.Name = "ManagerRcU";
-            this.Text = "ManagerRcU";
+            this.Text = "FCB HotelMS";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).EndInit();

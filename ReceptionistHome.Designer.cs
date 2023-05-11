@@ -131,7 +131,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pfp1);
             this.Name = "ReceptionistHome";
-            this.Text = "ReceptionistHome";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.ReceptionistHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pfp1)).EndInit();
             this.ResumeLayout(false);
