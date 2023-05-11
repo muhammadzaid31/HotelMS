@@ -16,5 +16,15 @@ namespace HotelMS
         {
             InitializeComponent();
         }
+        private string tagValue;
+        public string TagValue
+        {
+            get { return tagValue; }
+            set { tagValue = value; }
+        }
+        private void CheckIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
