@@ -30,6 +30,7 @@
         {
             this.pfp = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn1 = new System.Windows.Forms.Button();
             this.gID = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.Phone = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,17 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Profile";
+            // 
+            // btn1
+            // 
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Location = new System.Drawing.Point(257, 340);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(246, 40);
+            this.btn1.TabIndex = 16;
+            this.btn1.Text = "View Booking History";
+            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // gID
             // 
@@ -204,20 +215,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(253, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 24);
+            this.label1.Size = new System.Drawing.Size(95, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "gID:";
-            // 
-            // btn1
-            // 
-            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(257, 340);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(246, 40);
-            this.btn1.TabIndex = 16;
-            this.btn1.Text = "View Booking History";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            this.label1.Text = "Guest ID:";
             // 
             // ManagerGVp
             // 
@@ -226,7 +226,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "ManagerGVp";
-            this.Text = "ManagerGVp";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.ManagerGVp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pfp)).EndInit();
             this.groupBox1.ResumeLayout(false);

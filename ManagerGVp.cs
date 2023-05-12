@@ -58,9 +58,12 @@ namespace HotelMS
 
         private void btn1_Click(object sender, EventArgs e)
         {
+       
             ManagerGBk myForm = new ManagerGBk();
             myForm.GID = gID.Text;
+            this.Hide();
             myForm.ShowDialog();
+            this.Show();
         }
     }
 }

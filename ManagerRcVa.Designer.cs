@@ -55,7 +55,7 @@
             this.Receptionists.Location = new System.Drawing.Point(32, 50);
             this.Receptionists.Name = "Receptionists";
             this.Receptionists.ReadOnly = true;
-            this.Receptionists.Size = new System.Drawing.Size(737, 320);
+            this.Receptionists.Size = new System.Drawing.Size(737, 363);
             this.Receptionists.TabIndex = 1;
             this.Receptionists.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Receptionists_CellContentClick);
             // 

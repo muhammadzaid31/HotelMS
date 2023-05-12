@@ -105,7 +105,9 @@ namespace HotelMS
                 string tagValue = buttonCell.Value.ToString();
                 CheckOut myForm = new CheckOut();
                 myForm.TagValue = tagValue;
+                this.Hide();
                 myForm.ShowDialog();
+                this.Show();
             }
 
         }
@@ -114,11 +116,13 @@ namespace HotelMS
         {
             if (vRooms.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)vRooms.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                string tagValue = buttonCell.Value.ToString();
+                DataGridViewButtonCell buttonCell1 = (DataGridViewButtonCell)vRooms.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                string tagValue = buttonCell1.Value.ToString();
                 CheckIn myForm = new CheckIn();
                 myForm.TagValue = tagValue;
+                this.Hide();
                 myForm.ShowDialog();
+                this.Show();
             }
         }
     }

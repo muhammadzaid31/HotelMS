@@ -50,16 +50,16 @@
             this.gender,
             this.phone,
             this.email});
-            this.Guests.Location = new System.Drawing.Point(19, 33);
+            this.Guests.Location = new System.Drawing.Point(19, 48);
             this.Guests.Name = "Guests";
             this.Guests.ReadOnly = true;
-            this.Guests.Size = new System.Drawing.Size(644, 339);
+            this.Guests.Size = new System.Drawing.Size(644, 368);
             this.Guests.TabIndex = 2;
             this.Guests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Guests_CellContentClick);
             // 
             // gID
             // 
-            this.gID.HeaderText = "gID";
+            this.gID.HeaderText = "Guest ID";
             this.gID.Name = "gID";
             this.gID.ReadOnly = true;
             this.gID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -98,10 +98,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 408);
+            this.ClientSize = new System.Drawing.Size(695, 439);
             this.Controls.Add(this.Guests);
             this.Name = "ManagerGVa";
-            this.Text = "ManagerGVa";
+            this.Text = "FCB HotelMS";
             this.Load += new System.EventHandler(this.ManagerGVa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Guests)).EndInit();
             this.ResumeLayout(false);

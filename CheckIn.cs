@@ -31,8 +31,7 @@ namespace HotelMS
         {
             this.Hide();
             new CreateGuest().ShowDialog();
-            CreateBooking myForm = new CreateBooking();
-            myForm.RID = this.TagValue;
+            CreateBooking myForm = new CreateBooking();  
             myForm.ShowDialog();
             this.Show();
         }

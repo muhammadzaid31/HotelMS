@@ -70,11 +70,11 @@
             submit.BackColor = System.Drawing.Color.LightBlue;
             submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             submit.ForeColor = System.Drawing.SystemColors.ControlText;
-            submit.Location = new System.Drawing.Point(204, 88);
+            submit.Location = new System.Drawing.Point(123, 88);
             submit.Name = "submit";
-            submit.Size = new System.Drawing.Size(134, 33);
+            submit.Size = new System.Drawing.Size(320, 33);
             submit.TabIndex = 7;
-            submit.Text = "Submit RcID";
+            submit.Text = "Submit Receptionist ID";
             submit.UseVisualStyleBackColor = false;
             submit.Click += new System.EventHandler(this.submit_Click);
             // 
@@ -99,9 +99,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(55, 50);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 20);
+            this.label11.Size = new System.Drawing.Size(188, 20);
             this.label11.TabIndex = 17;
-            this.label11.Text = "Enter rcID";
+            this.label11.Text = "Enter Receptionist ID:";
             // 
             // groupBox2
             // 
@@ -141,9 +141,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(11, 322);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 20);
+            this.label7.Size = new System.Drawing.Size(147, 20);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Enter ID:";
+            this.label7.Text = "Enter ID number:";
             // 
             // pB1
             // 
@@ -217,9 +217,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(188, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter rcID:";
+            this.label1.Text = "Enter Receptionist ID:";
             // 
             // label8
             // 

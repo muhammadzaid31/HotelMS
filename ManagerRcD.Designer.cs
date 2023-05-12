@@ -51,17 +51,17 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(129, 119);
+            this.label1.Location = new System.Drawing.Point(78, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.Size = new System.Drawing.Size(212, 24);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Enter rcID:";
+            this.label1.Text = "Enter Receptionist ID:";
             // 
             // txtRcid
             // 
             this.txtRcid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRcid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRcid.Location = new System.Drawing.Point(258, 119);
+            this.txtRcid.Location = new System.Drawing.Point(307, 119);
             this.txtRcid.Name = "txtRcid";
             this.txtRcid.Size = new System.Drawing.Size(242, 26);
             this.txtRcid.TabIndex = 9;

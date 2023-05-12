@@ -70,13 +70,20 @@ namespace HotelMS
 
         private void Guests_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Guests.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            try
             {
-                DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)Guests.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                string tagValue = buttonCell.Value.ToString();
-                ManagerGVp myForm = new ManagerGVp();
-                myForm.TagValue = tagValue;
-                myForm.ShowDialog();
+                if (Guests.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+                {
+                    DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)Guests.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    string tagValue = buttonCell.Value.ToString();
+                    ManagerGVp myForm = new ManagerGVp();
+                    myForm.TagValue = tagValue;
+                    myForm.ShowDialog();
+                }
+            }
+            catch (Exception ex) 
+            {
+
             }
         }
     }

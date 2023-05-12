@@ -21,13 +21,6 @@ namespace HotelMS
         {
             InitializeComponent();
         }
-        private string rID;
-        public string RID
-        {
-            get { return rID; }
-            set { rID = value; }
-        }
-        
 
         private void CreateBooking_Load(object sender, EventArgs e)
         {
@@ -39,7 +32,7 @@ namespace HotelMS
         {
 
             
-            string roomID = this.RID;
+            string RID = txtrID.Text;
             string recID = txtrcID.Text;
             string bookingID = txtbkID.Text;
             string billID = txtBID.Text;
@@ -66,7 +59,7 @@ namespace HotelMS
                 string query = "UPDATE rooms SET rStatus = False WHERE rID = @rID";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
-                    command.Parameters.AddWithValue("@rID", roomID);
+                    command.Parameters.AddWithValue("@rID", txtrID.Text);
                     command.ExecuteNonQuery();
                 }
             }
@@ -90,7 +83,7 @@ namespace HotelMS
                     command.Parameters.AddWithValue("@bkDate", current);
                     command.Parameters.AddWithValue("@CODate", CheckOutDate);
                     command.Parameters.AddWithValue("@duration", duration);
-                    command.Parameters.AddWithValue("@rID", roomID);
+                    command.Parameters.AddWithValue("@rID", RID);
                     command.Parameters.AddWithValue("@rcID", recID);
                     command.Parameters.AddWithValue("@mID", managerID.Text );
                     command.Parameters.AddWithValue("@gID", txtgID.Text);
