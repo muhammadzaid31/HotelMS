@@ -89,7 +89,7 @@
             button2.BackColor = System.Drawing.Color.LightBlue;
             button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(242, 884);
+            button2.Location = new System.Drawing.Point(242, 779);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(305, 36);
             button2.TabIndex = 9;
@@ -165,7 +165,7 @@
             this.addReceptionist.Controls.Add(this.label2);
             this.addReceptionist.Controls.Add(this.label1);
             this.addReceptionist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addReceptionist.Location = new System.Drawing.Point(119, 338);
+            this.addReceptionist.Location = new System.Drawing.Point(119, 233);
             this.addReceptionist.Name = "addReceptionist";
             this.addReceptionist.Size = new System.Drawing.Size(678, 530);
             this.addReceptionist.TabIndex = 7;
@@ -363,7 +363,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(119, 184);
+            this.groupBox1.Location = new System.Drawing.Point(119, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(586, 148);
             this.groupBox1.TabIndex = 8;
@@ -436,7 +436,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 958);
+            this.ClientSize = new System.Drawing.Size(842, 749);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.addReceptionist);
@@ -444,6 +444,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AdminMU";
             this.Text = "FCB HotelMS";
+            this.Load += new System.EventHandler(this.AdminMU_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.addReceptionist.ResumeLayout(false);

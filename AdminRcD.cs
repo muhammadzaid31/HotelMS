@@ -14,6 +14,7 @@ using Org.BouncyCastle.Asn1.Ocsp;
 using static System.Net.WebRequestMethods;
 using static LinqToDB.Reflection.Methods.LinqToDB;
 using static LinqToDB.Sql;
+using MySqlConnector;
 
 namespace HotelMS
 {

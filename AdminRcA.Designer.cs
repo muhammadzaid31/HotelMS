@@ -62,7 +62,7 @@
             button2.BackColor = System.Drawing.Color.LightBlue;
             button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            button2.Location = new System.Drawing.Point(323, 593);
+            button2.Location = new System.Drawing.Point(328, 604);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(305, 36);
             button2.TabIndex = 2;

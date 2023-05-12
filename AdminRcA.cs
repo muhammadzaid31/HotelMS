@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static LinqToDB.Common.Configuration;
 using MySql.Data.MySqlClient;
+using MySqlConnector;
 namespace HotelMS
 {
     public partial class AdminRcA : Form

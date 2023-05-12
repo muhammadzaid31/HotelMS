@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using MySql.Data.MySqlClient;
-
+using MySqlConnector;
 namespace HotelMS
 {
     public partial class AdminMVp : Form
