@@ -38,7 +38,7 @@ namespace HotelMS
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string guestID = txtgID.Text;
+            
             string roomID = this.RID;
             string recID = txtrcID.Text;
             string bookingID = txtbkID.Text;
@@ -86,14 +86,14 @@ namespace HotelMS
                 using (MySqlCommand command = new MySqlCommand(query2, conn))
                 {
                  
-                    command.Parameters.AddWithValue("@bkID", roomID);
+                    command.Parameters.AddWithValue("@bkID", bookingID);
                     command.Parameters.AddWithValue("@bkDate", current);
                     command.Parameters.AddWithValue("@CODate", CheckOutDate);
                     command.Parameters.AddWithValue("@duration", duration);
                     command.Parameters.AddWithValue("@rID", roomID);
                     command.Parameters.AddWithValue("@rcID", recID);
                     command.Parameters.AddWithValue("@mID", managerID.Text );
-                    command.Parameters.AddWithValue("@gID", guestID);
+                    command.Parameters.AddWithValue("@gID", txtgID.Text);
                     command.Parameters.AddWithValue("@bID", billID);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Booking Successfully created");
