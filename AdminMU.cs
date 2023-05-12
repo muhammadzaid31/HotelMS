@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DryIoc;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using MySqlConnector;
 
 namespace HotelMS

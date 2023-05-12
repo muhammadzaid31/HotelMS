@@ -91,9 +91,8 @@
             this.txtbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbID.Location = new System.Drawing.Point(268, 50);
             this.txtbID.Name = "txtbID";
-            this.txtbID.Size = new System.Drawing.Size(60, 24);
+            this.txtbID.Size = new System.Drawing.Size(0, 24);
             this.txtbID.TabIndex = 4;
-            this.txtbID.Text = "label5";
             // 
             // txtbA
             // 
@@ -101,9 +100,8 @@
             this.txtbA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbA.Location = new System.Drawing.Point(268, 167);
             this.txtbA.Name = "txtbA";
-            this.txtbA.Size = new System.Drawing.Size(60, 24);
+            this.txtbA.Size = new System.Drawing.Size(0, 24);
             this.txtbA.TabIndex = 5;
-            this.txtbA.Text = "label6";
             // 
             // txtbD
             // 
@@ -111,9 +109,8 @@
             this.txtbD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbD.Location = new System.Drawing.Point(268, 110);
             this.txtbD.Name = "txtbD";
-            this.txtbD.Size = new System.Drawing.Size(60, 24);
+            this.txtbD.Size = new System.Drawing.Size(0, 24);
             this.txtbD.TabIndex = 6;
-            this.txtbD.Text = "label7";
             // 
             // txtkID
             // 
@@ -121,9 +118,8 @@
             this.txtkID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtkID.Location = new System.Drawing.Point(268, 341);
             this.txtkID.Name = "txtkID";
-            this.txtkID.Size = new System.Drawing.Size(60, 24);
+            this.txtkID.Size = new System.Drawing.Size(0, 24);
             this.txtkID.TabIndex = 7;
-            this.txtkID.Text = "label8";
             // 
             // txtFine
             // 
@@ -132,9 +128,8 @@
             this.txtFine.ForeColor = System.Drawing.Color.DarkRed;
             this.txtFine.Location = new System.Drawing.Point(268, 227);
             this.txtFine.Name = "txtFine";
-            this.txtFine.Size = new System.Drawing.Size(60, 24);
+            this.txtFine.Size = new System.Drawing.Size(0, 24);
             this.txtFine.TabIndex = 9;
-            this.txtFine.Text = "label6";
             // 
             // label6
             // 
@@ -152,9 +147,8 @@
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.Location = new System.Drawing.Point(268, 283);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(60, 24);
+            this.txtTotal.Size = new System.Drawing.Size(0, 24);
             this.txtTotal.TabIndex = 11;
-            this.txtTotal.Text = "label6";
             // 
             // label8
             // 

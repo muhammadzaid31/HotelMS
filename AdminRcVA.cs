@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 using Org.BouncyCastle.Asn1.X509;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 

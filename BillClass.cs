@@ -15,52 +15,16 @@ namespace HotelMS
         private int bTotal;
         private string bkID;
 
-        public string BID
-        {
-            get { return bID; }
-            set { bID = value; }
-        }
+        public string BID{get; set;}
 
-        public string BDate
-        {
-            get
-            {
-                return bDate;
-            }
-            set
-            {
-                bDate = value;
-            }
-        }
+        public string BDate{get; set;}
 
-        public int BAmount
-        {
-            get
-            {
-                return bAmount;
-            }
-            set
-            {
-                bAmount = value;
-            }
-        }
-        public int BFine
-        {
-            get { return bFine; }
-            set { bFine = value; }
-        }
+        public int BAmount{ get; set;}
 
-        public int BTotal
-        {
-            get { return bTotal; }
-            set { bTotal = value; }
-        }
+        public int BTotal{ get; set; }
+        public int BFine { get; set; }
 
-        public string BkID
-        {
-            get { return bkID; }
-            set { bkID = value; }
-        }
+        public string BkID{ get; set; }
 
         public ReceptionistClass ReceptionistClass
         {

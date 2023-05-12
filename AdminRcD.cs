@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
 using static System.Net.WebRequestMethods;
 using static LinqToDB.Reflection.Methods.LinqToDB;

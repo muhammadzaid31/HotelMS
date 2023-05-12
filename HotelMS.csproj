@@ -345,12 +345,6 @@
     <Compile Include="CreateBooking.Designer.cs">
       <DependentUpon>CreateBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateBookingExisting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateBookingExisting.Designer.cs">
-      <DependentUpon>CreateBookingExisting.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateGuest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -663,9 +657,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateBooking.resx">
       <DependentUpon>CreateBooking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateBookingExisting.resx">
-      <DependentUpon>CreateBookingExisting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateGuest.resx">
       <DependentUpon>CreateGuest.cs</DependentUpon>

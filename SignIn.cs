@@ -33,6 +33,10 @@ namespace HotelMS
                 string Role = txtRole.Text;
                 string Username = txtUsername.Text;
                 string Password = txtPassword.Text;
+                if (Role != "Admin" || Role != "Manager" || Role != "Receptionist")
+                {
+                    MessageBox.Show("Please Enter Valid Role");
+                }
                 switch (Role)
                 {
                     case "Receptionist":
@@ -134,10 +138,6 @@ namespace HotelMS
                         break;
 
                 }
-                if (Role != "Admin" || Role != "Manager" || Role != "Receptionist") 
-                {
-                    MessageBox.Show("Please Enter Valid Role");
-                }
              }
             catch (Exception ex)
             {
@@ -150,6 +150,11 @@ namespace HotelMS
             this.Hide();
             new Main().ShowDialog();
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,7 +40,7 @@ namespace HotelMS
         private void btnExistingGuest_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new CreateBookingExisting().ShowDialog();
+            new CreateBooking().ShowDialog();
             this.Show();
         }
     }

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static LinqToDB.Common.Configuration;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using MySqlConnector;
 namespace HotelMS
 {

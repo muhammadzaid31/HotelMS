@@ -16,7 +16,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
 using MySqlConnector;
 using static System.Net.Mime.MediaTypeNames;
