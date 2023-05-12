@@ -104,7 +104,7 @@
             this.ClientSize = new System.Drawing.Size(775, 423);
             this.Controls.Add(this.bkHistory);
             this.Name = "ManagerGBk";
-            this.Text = "ManagerGBk";
+            this.Text = "FC Hotel MS";
             this.Load += new System.EventHandler(this.ManagerGBk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bkHistory)).EndInit();
             this.ResumeLayout(false);

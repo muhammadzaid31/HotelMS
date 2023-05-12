@@ -51,14 +51,14 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(98, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 24);
+            this.label1.Size = new System.Drawing.Size(151, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Enter gID:";
+            this.label1.Text = "Enter Guest ID:";
             // 
             // txtgid
             // 
             this.txtgid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgid.Location = new System.Drawing.Point(227, 112);
+            this.txtgid.Location = new System.Drawing.Point(255, 112);
             this.txtgid.Name = "txtgid";
             this.txtgid.Size = new System.Drawing.Size(242, 26);
             this.txtgid.TabIndex = 3;

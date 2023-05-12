@@ -64,22 +64,37 @@ namespace HotelMS
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             new AdminRD().ShowDialog();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
             new AdminRU().ShowDialog();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+                
             new AdminRVa().ShowDialog();
+              
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             new AdminRA().ShowDialog();
+            
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AdminHome().ShowDialog();
+            this.Close();
         }
     }
 }

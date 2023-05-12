@@ -226,9 +226,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(62, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter gID:";
+            this.label1.Text = "Enter Guest ID:";
             // 
             // ManagerGA
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.addReceptionist);
             this.Controls.Add(button2);
             this.Name = "ManagerGA";
-            this.Text = "ManagerGA";
+            this.Text = "FC HotelMS";
             this.Load += new System.EventHandler(this.ManagerGA_Load);
             this.addReceptionist.ResumeLayout(false);
             this.addReceptionist.PerformLayout();

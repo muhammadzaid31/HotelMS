@@ -105,6 +105,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(submit);
             this.groupBox2.Controls.Add(this.txtUID);
             this.groupBox2.Controls.Add(this.label11);

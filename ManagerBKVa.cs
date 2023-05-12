@@ -69,29 +69,40 @@ namespace HotelMS
 
         private void bkHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewButtonColumn buttonColumn1 = (DataGridViewButtonColumn)bkHistory.Columns["bID"];
-            DataGridViewButtonColumn buttonColumn2 = (DataGridViewButtonColumn)bkHistory.Columns["rcID"];
-            if (bkHistory.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            try
             {
-                if (e.ColumnIndex == buttonColumn2.Index)
+                DataGridViewButtonColumn buttonColumn1 = (DataGridViewButtonColumn)bkHistory.Columns["bID"];
+                DataGridViewButtonColumn buttonColumn2 = (DataGridViewButtonColumn)bkHistory.Columns["rcID"];
+                if (bkHistory.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
                 {
-                    // Handle buttonColumn1 click
-                    DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)bkHistory.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    string tagValue = buttonCell.Value.ToString();
-                    ManagerRcVp myForm = new ManagerRcVp();
-                    myForm.TagValue = tagValue;
-                    myForm.ShowDialog();
-                }
-                else if (e.ColumnIndex == buttonColumn1.Index)
-                {
-                    // Handle buttonColumn2 click
-                    DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)bkHistory.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                    string tagValue = buttonCell.Value.ToString();
-                    ManagerGBkB myForm = new ManagerGBkB();
-                    myForm.TagValue = tagValue;
-                    myForm.ShowDialog();
+                    if (e.ColumnIndex == buttonColumn2.Index)
+                    {
+                        // Handle buttonColumn1 click
+                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)bkHistory.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                        string tagValue = buttonCell.Value.ToString();
+                        ManagerRcVp myForm = new ManagerRcVp();
+                        myForm.TagValue = tagValue;
+                        myForm.ShowDialog();
+                    }
+                    else if (e.ColumnIndex == buttonColumn1.Index)
+                    {
+                        // Handle buttonColumn2 click
+                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)bkHistory.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                        string tagValue = buttonCell.Value.ToString();
+                        ManagerGBkB myForm = new ManagerGBkB();
+                        myForm.TagValue = tagValue;
+                        myForm.ShowDialog();
+                    }
                 }
             }
+            catch (Exception ex) { }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ManagerBK().ShowDialog();
+            this.Close();
         }
     }
 }

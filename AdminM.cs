@@ -38,8 +38,9 @@ namespace HotelMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+            
             new AdminMVa().ShowDialog();
+            
            
         }
 
@@ -47,7 +48,7 @@ namespace HotelMS
         {
             
             new AdminMA().ShowDialog();
-            
+                       
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -59,9 +60,7 @@ namespace HotelMS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
-            new AdminMU().ShowDialog();
-            
+            new AdminMU().ShowDialog();          
         }
 
         private void AdminM_Load(object sender, EventArgs e)

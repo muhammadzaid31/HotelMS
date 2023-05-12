@@ -100,9 +100,8 @@
             this.gID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gID.Location = new System.Drawing.Point(432, 65);
             this.gID.Name = "gID";
-            this.gID.Size = new System.Drawing.Size(60, 24);
+            this.gID.Size = new System.Drawing.Size(0, 24);
             this.gID.TabIndex = 15;
-            this.gID.Text = "label8";
             // 
             // Email
             // 
@@ -111,9 +110,8 @@
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(432, 296);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(70, 24);
+            this.Email.Size = new System.Drawing.Size(0, 24);
             this.Email.TabIndex = 13;
-            this.Email.Text = "label13";
             // 
             // Phone
             // 
@@ -122,9 +120,8 @@
             this.Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Phone.Location = new System.Drawing.Point(432, 252);
             this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(70, 24);
+            this.Phone.Size = new System.Drawing.Size(0, 24);
             this.Phone.TabIndex = 12;
-            this.Phone.Text = "label12";
             // 
             // Gender
             // 
@@ -133,9 +130,8 @@
             this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gender.Location = new System.Drawing.Point(432, 209);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(70, 24);
+            this.Gender.Size = new System.Drawing.Size(0, 24);
             this.Gender.TabIndex = 11;
-            this.Gender.Text = "label11";
             // 
             // name
             // 
@@ -144,9 +140,8 @@
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.Location = new System.Drawing.Point(432, 115);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(70, 24);
+            this.name.Size = new System.Drawing.Size(0, 24);
             this.name.TabIndex = 10;
-            this.name.Text = "label10";
             // 
             // DoB
             // 
@@ -155,9 +150,8 @@
             this.DoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoB.Location = new System.Drawing.Point(432, 165);
             this.DoB.Name = "DoB";
-            this.DoB.Size = new System.Drawing.Size(60, 24);
+            this.DoB.Size = new System.Drawing.Size(0, 24);
             this.DoB.TabIndex = 9;
-            this.DoB.Text = "label9";
             // 
             // label6
             // 

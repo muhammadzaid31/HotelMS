@@ -43,6 +43,7 @@ namespace HotelMS
             
             new AdminRcVA().ShowDialog();
             
+            
         }
 
         private void Receptionists_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,35 +64,44 @@ namespace HotelMS
          "database = hotel";
 
             string query = "SELECT Name,aProfilePic FROM Admin ";
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            MySqlCommand command = new MySqlCommand(query, conn);
-
-            MySqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                label1.Text = reader.GetString(0).ToString();
-                byte[] imageData = (byte[])reader["aProfilePic"];
-                MemoryStream ms = new MemoryStream(imageData);
-                pfp1.Image = Image.FromStream(ms);
-                conn.Close();
+                conn.Open();
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        label1.Text = reader.GetString(0).ToString();
+                        byte[] imageData = (byte[])reader["aProfilePic"];
+                        using (MemoryStream ms = new MemoryStream(imageData))
+                        {
+                            pfp1.Image = Image.FromStream(ms);
+                        }
+                    }
+                }
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new AdminRcA ().ShowDialog();    
+           
+            new AdminRcA ().ShowDialog();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             new AdminRcD().ShowDialog();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            new AdminRcU ().ShowDialog();
+            
+            new AdminRcU().ShowDialog();
+           
         }
     }
 }

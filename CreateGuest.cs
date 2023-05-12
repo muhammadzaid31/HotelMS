@@ -35,45 +35,51 @@ namespace HotelMS
                 imageData = File.ReadAllBytes(filePath);
             }
         }
-       
+
         private void button2_Click(object sender, EventArgs e)
         {
-         
-            string gID = txtgID.Text;
-            string gName = txtName.Text;
-            DateTime selectedDate = dtp.Value;
-            string gDoB = selectedDate.ToString("dd-MM-yy");
-            string gGender = txtGender.Text;
-            string gPhone = txtPhone.Text;
-            string gEmail = txtEmail.Text;
-            if (string.IsNullOrEmpty(filePath))
+            try
             {
-                MessageBox.Show("Please select an image file first.");
-                return;
+                string gID = txtgID.Text;
+                string gName = txtName.Text;
+                DateTime selectedDate = dtp.Value;
+                string gDoB = selectedDate.ToString("dd-MM-yy");
+                string gGender = txtGender.Text;
+                string gPhone = txtPhone.Text;
+                string gEmail = txtEmail.Text;
+                if (string.IsNullOrEmpty(filePath))
+                {
+                    MessageBox.Show("Please select an image file first.");
+                    return;
+                }
+                byte[] gPfp = imageData;
+                string connString = "server = localhost ;" +
+              " uid=root;" +
+              " pwd = '' ; " +
+              "database = hotel";
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+
+                string query1 = "INSERT INTO `guest`(`gID`, `Name`, `DoB`, `Gender`, `Phone`, " +
+                    "`Email`, `gProfilePic`) " +
+                    "VALUES (@gID,@gName,@gDoB,@gGender,@gPhone,@gEmail,@gProfilePic)";
+                MySqlCommand command1 = new MySqlCommand(query1, conn);
+                command1.Parameters.AddWithValue("@gID", gID);
+                command1.Parameters.AddWithValue("@gName", gName);
+                command1.Parameters.AddWithValue("@gDoB", gDoB);
+                command1.Parameters.AddWithValue("@gGender", gGender);
+                command1.Parameters.AddWithValue("@gPhone", gPhone);
+                command1.Parameters.AddWithValue("@gEmail", gEmail);
+                command1.Parameters.AddWithValue("@gProfilePic", gPfp);
+                command1.ExecuteNonQuery();
+                MessageBox.Show("Successfully created Guest Profile");
+                conn.Close();
+                this.Close();
             }
-            byte[] gPfp = imageData;
-            string connString = "server = localhost ;" +
-          " uid=root;" +
-          " pwd = '' ; " +
-          "database = hotel";
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            
-            string query1 = "INSERT INTO `guest`(`gID`, `Name`, `DoB`, `Gender`, `Phone`, " +
-                "`Email`, `gProfilePic`) " +
-                "VALUES (@gID,@gName,@gDoB,@gGender,@gPhone,@gEmail,@gProfilePic)";
-            MySqlCommand command1 = new MySqlCommand(query1, conn);
-            command1.Parameters.AddWithValue("@gID", gID);
-            command1.Parameters.AddWithValue("@gName", gName);
-            command1.Parameters.AddWithValue("@gDoB", gDoB);
-            command1.Parameters.AddWithValue("@gGender", gGender);
-            command1.Parameters.AddWithValue("@gPhone", gPhone);
-            command1.Parameters.AddWithValue("@gEmail", gEmail);
-            command1.Parameters.AddWithValue("@gProfilePic", gPfp);
-            command1.ExecuteNonQuery();
-            MessageBox.Show("Successfully created Guest Profile");
-            conn.Close();
-            this.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter Details in Correct Format");
+            }
         }
     }
 }

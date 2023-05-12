@@ -20,27 +20,33 @@ namespace HotelMS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string rID = txtruID.Text;
-            string connString = "server = localhost ;" +
-      " uid=root;" +
-      " pwd = '' ; " +
-      "database = hotel";
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            string query = "select * from rooms where rID = @rID";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            command.Parameters.AddWithValue("@rID", rID);
-            command.ExecuteNonQuery();
-            MySqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            txtrID.Text=reader["rID"].ToString();
-            cB1.Text= reader["rType"].ToString();
-            txtrPrice.Text= reader["rPrice"].ToString();
-            txtrStatus.Text= reader["rStatus"].ToString();
-            reader.Close();
-            conn.Close();
+            try {
+                string rID = txtruID.Text;
+                string connString = "server = localhost ;" +
+          " uid=root;" +
+          " pwd = '' ; " +
+          "database = hotel";
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                string query = "select * from rooms where rID = @rID";
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("@rID", rID);
+                command.ExecuteNonQuery();
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Read();
+                txtrID.Text = reader["rID"].ToString();
+                cB1.Text = reader["rType"].ToString();
+                txtrPrice.Text = reader["rPrice"].ToString();
+                txtrStatus.Text = reader["rStatus"].ToString();
+                reader.Close();
+                conn.Close();
 
-                        
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter Room ID in Correct Format");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

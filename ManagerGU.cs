@@ -26,41 +26,40 @@ namespace HotelMS
         public byte[] rcPfp;
         private void submit_Click(object sender, EventArgs e)
         {
-            string connString = "server = localhost ;" +
-            " uid=root;" +
-            " pwd = '' ; " +
-            "database = hotel";
+            try {
+                string connString = "server = localhost ;" +
+                " uid=root;" +
+                " pwd = '' ; " +
+                "database = hotel";
 
-            string gID = txtguest.Text;
-            string query = "SELECT * FROM guest WHERE gID=@gID";
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            MySqlCommand command = new MySqlCommand(query, conn);
-            command.Parameters.AddWithValue("@gID", gID);
-            MySqlDataReader reader = command.ExecuteReader();
+                string gID = txtguest.Text;
+                string query = "SELECT * FROM guest WHERE gID=@gID";
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("@gID", gID);
+                MySqlDataReader reader = command.ExecuteReader();
 
-            reader.Read();
+                reader.Read();
 
-            txtgID.Text = reader["gID"].ToString();
-            txtName.Text = reader["Name"].ToString();
-            dtp.Value = DateTime.Parse(reader["DoB"].ToString());
-            txtGender.Text = reader["Gender"].ToString();
-            txtPhone.Text = reader["Phone"].ToString();
-            txtEmail.Text = reader["Email"].ToString();
-            txtnov.Text = reader["NumberOfVisits"].ToString();
-            byte[] data = (byte[])reader["gProfilePic"];
+                txtgID.Text = reader["gID"].ToString();
+                txtName.Text = reader["Name"].ToString();
+                dtp.Value = DateTime.Parse(reader["DoB"].ToString());
+                txtGender.Text = reader["Gender"].ToString();
+                txtPhone.Text = reader["Phone"].ToString();
+                txtEmail.Text = reader["Email"].ToString();
+                txtnov.Text = reader["NumberOfVisits"].ToString();
+                byte[] data = (byte[])reader["gProfilePic"];
+                MemoryStream ms = new MemoryStream(data);
+                Bitmap bmp = new Bitmap(ms);
+                pB1.Image = bmp;
+                reader.Close();
 
-
-            MemoryStream ms = new MemoryStream(data);
-
-
-            Bitmap bmp = new Bitmap(ms);
-
-
-            pB1.Image = bmp;
-
-            reader.Close();
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter  Guest ID in Correct Format");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,6 +132,11 @@ namespace HotelMS
             MessageBox.Show("Successfully Updated Guest Profile");
             conn.Close();
             this.Close();
+        }
+
+        private void ManagerGU_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

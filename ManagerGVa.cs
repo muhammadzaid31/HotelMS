@@ -78,13 +78,22 @@ namespace HotelMS
                     string tagValue = buttonCell.Value.ToString();
                     ManagerGVp myForm = new ManagerGVp();
                     myForm.TagValue = tagValue;
+                    this.Hide();
                     myForm.ShowDialog();
+                    this.Show();
                 }
             }
             catch (Exception ex) 
             {
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ManagerG().ShowDialog();
+            this.Close();
         }
     }
 }

@@ -90,51 +90,52 @@ namespace HotelMS
 
         private void submit_Click(object sender, EventArgs e)
         {
-            string connString = "server = localhost ;" +
-            " uid=root;" +
-            " pwd = '' ; " +
-            "database = hotel";
+            try {
+                string connString = "server = localhost ;" +
+                " uid=root;" +
+                " pwd = '' ; " +
+                "database = hotel";
 
-            string rcID = txtUID.Text;
-            string query = "SELECT * FROM Receptionists WHERE rcID=@rcID";
-            MySqlConnection conn = new MySqlConnection(connString);
-            conn.Open();
-            MySqlCommand command = new MySqlCommand(query, conn);
-            command.Parameters.AddWithValue("@rcID",rcID);
-            MySqlDataReader reader = command.ExecuteReader();
+                string rcID = txtUID.Text;
+                string query = "SELECT * FROM Receptionists WHERE rcID=@rcID";
+                MySqlConnection conn = new MySqlConnection(connString);
+                conn.Open();
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("@rcID", rcID);
+                MySqlDataReader reader = command.ExecuteReader();
 
-            reader.Read();
-            
-                txtrcID.Text=reader["rcID"].ToString();
-            txtName.Text =reader["Name"].ToString();
-            dtp.Value = DateTime.Parse(reader["DoB"].ToString());            
-            txtGender.Text = reader["Gender"].ToString();
-            txtPhone.Text = reader["Phone"].ToString();
-            txtEmail.Text = reader["Email"].ToString();
-            txtID.Text = reader["ID"].ToString();
-            int RCID = int.Parse(reader["ID"].ToString());
-            byte[] data = (byte[])reader["rcProfilePic"];
+                reader.Read();
 
-            
-            MemoryStream ms = new MemoryStream(data);
+                txtrcID.Text = reader["rcID"].ToString();
+                txtName.Text = reader["Name"].ToString();
+                dtp.Value = DateTime.Parse(reader["DoB"].ToString());
+                txtGender.Text = reader["Gender"].ToString();
+                txtPhone.Text = reader["Phone"].ToString();
+                txtEmail.Text = reader["Email"].ToString();
+                txtID.Text = reader["ID"].ToString();
+                int RCID = int.Parse(reader["ID"].ToString());
+                byte[] data = (byte[])reader["rcProfilePic"];
+                MemoryStream ms = new MemoryStream(data);
+                Bitmap bmp = new Bitmap(ms);
+                pB1.Image = bmp;
+                reader.Close();
 
-           
-            Bitmap bmp = new Bitmap(ms);
 
-            
-            pB1.Image = bmp;
-        
-        reader.Close();
-            string query1 = "SELECT * FROM users WHERE ID = @ID ";
-            MySqlCommand command1 = new MySqlCommand(query1, conn);
-            command1.Parameters.AddWithValue("@ID", RCID);
-            MySqlDataReader reader1 = command.ExecuteReader();
+                string query1 = "SELECT * FROM users WHERE ID = @ID ";
+                MySqlCommand command1 = new MySqlCommand(query1, conn);
+                command1.Parameters.AddWithValue("@ID", RCID);
+                MySqlDataReader reader1 = command.ExecuteReader();
 
-            reader1.Read();
-            txtUsername.Text = reader1.GetString(1).ToString();
-            txtPassword.Text = reader1.GetString(2).ToString();
-            reader1.Close();
+                reader1.Read();
+                txtUsername.Text = reader1.GetString(1).ToString();
+                txtPassword.Text = reader1.GetString(2).ToString();
+                reader1.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter Receptionist ID in Correct Format");
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

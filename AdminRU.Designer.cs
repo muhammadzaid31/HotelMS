@@ -69,11 +69,11 @@
             button3.BackColor = System.Drawing.Color.LightBlue;
             button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            button3.Location = new System.Drawing.Point(204, 88);
+            button3.Location = new System.Drawing.Point(167, 88);
             button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(134, 33);
+            button3.Size = new System.Drawing.Size(214, 33);
             button3.TabIndex = 7;
-            button3.Text = "Submit rID";
+            button3.Text = "Submit Room ID";
             button3.UseVisualStyleBackColor = false;
             button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -138,9 +138,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(55, 50);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 20);
+            this.label12.Size = new System.Drawing.Size(134, 20);
             this.label12.TabIndex = 17;
-            this.label12.Text = "Enter rID";
+            this.label12.Text = "Enter Room ID:";
             // 
             // txtrID
             // 
@@ -192,9 +192,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(55, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter rID:";
+            this.label1.Text = "Enter Room ID:";
             // 
             // addReceptionist
             // 

@@ -167,9 +167,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(253, 333);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 24);
+            this.label7.Size = new System.Drawing.Size(116, 24);
             this.label7.TabIndex = 7;
-            this.label7.Text = "ID:";
+            this.label7.Text = "ID Number:";
             // 
             // label6
             // 
@@ -227,9 +227,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(253, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 24);
+            this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "rcID:";
+            this.label1.Text = "Receptionist ID:";
             // 
             // AdminRcVp
             // 

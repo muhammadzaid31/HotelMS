@@ -189,9 +189,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(54, 321);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.Size = new System.Drawing.Size(149, 20);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Enter ID";
+            this.label7.Text = "Enter ID Number:";
             // 
             // label6
             // 
@@ -256,9 +256,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(54, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(188, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enter rcID:";
+            this.label1.Text = "Enter Receptionist ID:";
             // 
             // groupBox1
             // 

@@ -86,14 +86,28 @@ namespace HotelMS
 
         private void Receptionists_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Receptionists.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            try
             {
-                DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)Receptionists.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                string tagValue = buttonCell.Value.ToString();
-                AdminRcVp myForm = new AdminRcVp();
-                myForm.TagValue = tagValue;
-                myForm.ShowDialog();
+                if (Receptionists.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+                {
+                    DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)Receptionists.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    string tagValue = buttonCell.Value.ToString();
+                    AdminRcVp myForm = new AdminRcVp();
+                    myForm.TagValue = tagValue;
+                    myForm.ShowDialog();
+                }
             }
+            catch (Exception ex) 
+            {
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AdminRc().ShowDialog();
+            this.Close();
         }
     }
 }

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using MySql.Data.MySqlClient;
-using MySqlConnector;
+using MySql.Data.MySqlClient;
+//using MySqlConnector;
 
 namespace HotelMS
 {
@@ -36,7 +36,7 @@ namespace HotelMS
                 command1.Parameters.AddWithValue("@mID", mID);
                 MySqlDataReader reader1 = command1.ExecuteReader();
                 reader1.Read();
-                string id = reader1.GetString(0).ToString();
+                int id = int.Parse(reader1.GetString(0));
                 string query2 = "DELETE FROM users WHERE ID = @ID;";
             reader1.Close();
             MySqlCommand command2 = new MySqlCommand(query2, conn);

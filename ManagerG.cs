@@ -73,22 +73,30 @@ namespace HotelMS
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new ManagerGA().ShowDialog();
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new ManagerGVa().ShowDialog();
+            this.Show();    
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Hide();    
             new ManagerGD().ShowDialog();
+            this.Show();    
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.Hide();    
             new ManagerGU().ShowDialog();
+            this.Show();    
         }
     }
 }

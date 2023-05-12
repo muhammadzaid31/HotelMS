@@ -51,17 +51,17 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 101);
+            this.label1.Location = new System.Drawing.Point(95, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(179, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Enter mID:";
+            this.label1.Text = "Enter Manager ID:";
             // 
             // txtMid
             // 
             this.txtMid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMid.Location = new System.Drawing.Point(254, 101);
+            this.txtMid.Location = new System.Drawing.Point(294, 99);
             this.txtMid.Name = "txtMid";
             this.txtMid.Size = new System.Drawing.Size(242, 26);
             this.txtMid.TabIndex = 3;

@@ -67,6 +67,7 @@
             this.back.TabIndex = 7;
             this.back.Text = "Back";
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // btnSignOut
             // 

@@ -36,6 +36,7 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Managers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,16 +53,16 @@
             this.phone,
             this.email,
             this.ID});
-            this.Managers.Location = new System.Drawing.Point(32, 65);
+            this.Managers.Location = new System.Drawing.Point(32, 75);
             this.Managers.Name = "Managers";
             this.Managers.ReadOnly = true;
-            this.Managers.Size = new System.Drawing.Size(737, 320);
+            this.Managers.Size = new System.Drawing.Size(737, 336);
             this.Managers.TabIndex = 1;
             this.Managers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Managers_CellContentClick);
             // 
             // mID
             // 
-            this.mID.HeaderText = "mID";
+            this.mID.HeaderText = "Manager ID";
             this.mID.Name = "mID";
             this.mID.ReadOnly = true;
             this.mID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -102,11 +103,22 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-1, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "<---";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminMVa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Managers);
             this.Name = "AdminMVa";
             this.Text = "FCB HotelMS";
@@ -126,5 +138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.Button button1;
     }
 }

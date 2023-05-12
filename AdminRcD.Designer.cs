@@ -37,7 +37,7 @@
             // 
             this.txtRcid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRcid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRcid.Location = new System.Drawing.Point(202, 83);
+            this.txtRcid.Location = new System.Drawing.Point(294, 83);
             this.txtRcid.Name = "txtRcid";
             this.txtRcid.Size = new System.Drawing.Size(242, 26);
             this.txtRcid.TabIndex = 0;
@@ -48,11 +48,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 83);
+            this.label1.Location = new System.Drawing.Point(76, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.Size = new System.Drawing.Size(212, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter rcID:";
+            this.label1.Text = "Enter Receptionist ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // del
@@ -60,7 +60,7 @@
             this.del.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.del.BackColor = System.Drawing.Color.LightSteelBlue;
             this.del.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.del.Location = new System.Drawing.Point(160, 144);
+            this.del.Location = new System.Drawing.Point(217, 144);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(155, 33);
             this.del.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 214);
+            this.ClientSize = new System.Drawing.Size(613, 214);
             this.Controls.Add(this.del);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtRcid);
