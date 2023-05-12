@@ -84,5 +84,10 @@ namespace HotelMS
                 imageData = File.ReadAllBytes(filePath);
             }
         }
+
+        private void ManagerGA_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

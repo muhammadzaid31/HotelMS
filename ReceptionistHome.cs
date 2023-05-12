@@ -34,7 +34,7 @@ namespace HotelMS
      " pwd = '' ; " +
      "database = hotel";
 
-            string query = "SELECT Name,rcProfilePic FROM receptionists Where ID=@ID ";
+            string query = "SELECT rcID, Name,rcProfilePic FROM receptionists Where ID=@ID ";
             MySqlConnection conn = new MySqlConnection(connString);
             int uid = this.UID;
             conn.Open();
@@ -45,7 +45,7 @@ namespace HotelMS
 
             if (reader.Read())
             {
-                label1.Text = reader.GetString(0).ToString();
+                label1.Text = reader.GetString(1);
                 byte[] imageData = (byte[])reader["rcProfilePic"];
                 MemoryStream ms = new MemoryStream(imageData);
                 pfp1.Image = Image.FromStream(ms);
@@ -64,17 +64,23 @@ namespace HotelMS
 
         private void btnGuestProfile_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new CreateGuest().ShowDialog();
+            this.Show();
         }
 
         private void btnRooms_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new ManagerBKVa().ShowDialog();
+            this.Show(); 
         }
 
         private void btnAvailability_Click(object sender, EventArgs e)
         {
-            new CheckAvail().ShowDialog(); 
+            this.Hide();
+            new CheckAvail().ShowDialog();
+            this.Show();
         }
     }
 }

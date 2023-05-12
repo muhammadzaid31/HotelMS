@@ -121,8 +121,8 @@ namespace HotelMS
                         }
                     }
                 }
-            }      
-            
+            }
+      
             DateTime startDate = DateTime.ParseExact(label12.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
             DateTime endDate = DateTime.ParseExact(txtbD.Text, "dd-MM-yy", CultureInfo.InvariantCulture);
 

@@ -26,5 +26,22 @@ namespace HotelMS
         {
 
         }
+
+        private void btnCreateGuest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CreateGuest().ShowDialog();
+            CreateBooking myForm = new CreateBooking();
+            myForm.RID = this.TagValue;
+            myForm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnExistingGuest_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CreateBookingExisting().ShowDialog();
+            this.Show();
+        }
     }
 }

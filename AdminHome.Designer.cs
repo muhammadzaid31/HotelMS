@@ -97,6 +97,7 @@
             this.Controls.Add(this.btnLogOut);
             this.Name = "AdminHome";
             this.Text = "FCB";
+            this.Load += new System.EventHandler(this.AdminHome_Load);
             this.ResumeLayout(false);
 
         }

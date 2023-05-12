@@ -339,6 +339,18 @@
     <Compile Include="CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBooking.Designer.cs">
+      <DependentUpon>CreateBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateBookingExisting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBookingExisting.Designer.cs">
+      <DependentUpon>CreateBookingExisting.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateGuest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -649,6 +661,12 @@
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateBooking.resx">
+      <DependentUpon>CreateBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBookingExisting.resx">
+      <DependentUpon>CreateBookingExisting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateGuest.resx">
       <DependentUpon>CreateGuest.cs</DependentUpon>
     </EmbeddedResource>
@@ -778,6 +796,7 @@
     <EmbeddedResource Include="Two4.resx">
       <DependentUpon>Two4.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="ClassDiagram1.cd" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
     <None Include="LinqToDB.Templates\DataModel.ttinclude" />

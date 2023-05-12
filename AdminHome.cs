@@ -46,5 +46,10 @@ namespace HotelMS
             new AdminR().ShowDialog();
             this.Close();
         }
+
+        private void AdminHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

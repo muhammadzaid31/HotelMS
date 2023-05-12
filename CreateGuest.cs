@@ -18,7 +18,6 @@ namespace HotelMS
             InitializeComponent();
         }
 
-
         private string filePath;
         private OpenFileDialog openFileDialog1 = new OpenFileDialog();
         public byte[] imageData;
@@ -36,9 +35,10 @@ namespace HotelMS
                 imageData = File.ReadAllBytes(filePath);
             }
         }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
+         
             string gID = txtgID.Text;
             string gName = txtName.Text;
             DateTime selectedDate = dtp.Value;

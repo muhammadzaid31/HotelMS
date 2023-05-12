@@ -239,6 +239,7 @@
             this.Controls.Add(button2);
             this.Name = "ManagerGA";
             this.Text = "ManagerGA";
+            this.Load += new System.EventHandler(this.ManagerGA_Load);
             this.addReceptionist.ResumeLayout(false);
             this.addReceptionist.PerformLayout();
             this.ResumeLayout(false);
