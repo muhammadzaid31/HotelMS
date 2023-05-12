@@ -18,6 +18,7 @@ using Google.Protobuf;
 using Google.Protobuf.Collections;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
+using MySqlConnector;
 using static System.Net.Mime.MediaTypeNames;
 using static LinqToDB.Common.Configuration;
 using Image = System.Drawing.Image;
