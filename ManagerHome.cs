@@ -28,7 +28,7 @@ namespace HotelMS
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MessageBox.Show("Successfully logged out");
+            MessageBox.Show("Successfully Signed out");
             new SignIn().ShowDialog();
             this.Close();
         }

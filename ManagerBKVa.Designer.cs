@@ -35,7 +35,7 @@
             this.rID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bID = new System.Windows.Forms.DataGridViewButtonColumn();
             this.rcID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gID = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bkHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +50,12 @@
             this.bkDuration,
             this.rID,
             this.bID,
-            this.rcID});
-            this.bkHistory.Location = new System.Drawing.Point(72, 48);
+            this.rcID,
+            this.gID});
+            this.bkHistory.Location = new System.Drawing.Point(67, 30);
             this.bkHistory.Name = "bkHistory";
             this.bkHistory.ReadOnly = true;
-            this.bkHistory.Size = new System.Drawing.Size(645, 455);
+            this.bkHistory.Size = new System.Drawing.Size(745, 455);
             this.bkHistory.TabIndex = 4;
             this.bkHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bkHistory_CellContentClick);
             // 
@@ -98,22 +99,17 @@
             this.rcID.Name = "rcID";
             this.rcID.ReadOnly = true;
             // 
-            // button1
+            // gID
             // 
-            this.button1.Location = new System.Drawing.Point(1, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "<---";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.gID.HeaderText = "Guest ID";
+            this.gID.Name = "gID";
+            this.gID.ReadOnly = true;
             // 
             // ManagerBKVa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 530);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(867, 530);
             this.Controls.Add(this.bkHistory);
             this.Name = "ManagerBKVa";
             this.Text = "ManagerBKVa";
@@ -132,6 +128,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rID;
         private System.Windows.Forms.DataGridViewButtonColumn bID;
         private System.Windows.Forms.DataGridViewButtonColumn rcID;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewButtonColumn gID;
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DryIoc;
 using MySql.Data.MySqlClient;
 
 
@@ -22,119 +23,75 @@ namespace HotelMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
+            
                 string connString = "server = localhost ;" +
                " uid=root;" +
                " pwd = '' ; " +
                "database = hotel";
 
-                string query = "SELECT * FROM Users";
-                string Role = txtRole.Text;
-                string Username = txtUsername.Text;
-                string Password = txtPassword.Text;
-                switch (Role)
+
+                using (MySqlConnection connection = new MySqlConnection(connString))
                 {
-                    case "Receptionist":
-                        MySqlConnection conn = new MySqlConnection(connString);
-                        conn.Open();
-                        MySqlCommand command = new MySqlCommand(query, conn);
-                        MySqlDataReader reader = command.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            string username = reader.GetString(1);
-                            string password = reader.GetString(2);
-                            string role = reader.GetString(3);
-                            if (role == Role)
-                            {
-                                bool temp = Person.Login(Username, username, Password, password);
-                                if (temp)
-                                {
-                                    MessageBox.Show("Successfully Signed in");
-                                    this.Hide();
-                                    ReceptionistHome myForm = new ReceptionistHome();
-                                    myForm.UID = int.Parse(reader.GetString(0));
-                                    myForm.ShowDialog();
-                                    this.Close();
-                                    break;
-                                }
-                                else 
-                                {
-                                    MessageBox.Show("Please Enter Correct Credentials, or Contact Admin");
-                                    break;
-                                }
-                            }
-                        } 
-                        break;
+                    connection.Open();
 
-                    case "Manager":
-                        MySqlConnection conn1 = new MySqlConnection(connString);
-                        conn1.Open();
-                        MySqlCommand command1 = new MySqlCommand(query, conn1);
-                        MySqlDataReader reader1 = command1.ExecuteReader();
-                        while (reader1.Read())
+                    // MySQL query to check user credentials
+                    string query = $"SELECT * FROM users WHERE username=@user AND password=@pass";
+                    string role = txtRole.Text ;    
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@user",txtUsername.Text);
+                        command.Parameters.AddWithValue("@pass", txtPassword.Text);
+                        using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            string username = reader1.GetString(1);
-                            string password = reader1.GetString(2);
-                            string role = reader1.GetString(3);
-                            if (role == Role)
+                        reader.Read();
+                            // If the query returns a result, user is authenticated
+                            if (reader.HasRows)
                             {
-                                bool temp = Person.Login(Username, username, Password, password);
-                                if (temp)
+                                MessageBox.Show("Successfully Signed in");
+                                this.Hide();
+
+                                // Redirect to appropriate form based on user role
+                                if (role == "Admin")
                                 {
-                                    MessageBox.Show("Successfully Signed in");
-                                    this.Hide();
-                                    ManagerHome myForm = new ManagerHome();
-                                    myForm.UID = int.Parse(reader1.GetString(0));
+                                    AdminHome myForm = new AdminHome();
                                     myForm.ShowDialog();
                                     this.Close();
-                                    break;
+                                }
+                                else if (role == "Receptionist")
+                                {
+                                    ReceptionistHome myForm2 = new ReceptionistHome();
+                                    myForm2.UID = int.Parse(reader.GetString(0));
+                                    myForm2.ShowDialog();
+                                    this.Close();
+                                }
+                                else if (role == "Manager")
+                                {
+                                    ManagerHome myForm1 = new ManagerHome();
+                                    myForm1.UID = int.Parse(reader.GetString(0));
+                                    myForm1.ShowDialog();
+                                    this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Please Enter Correct Credentials, or Contact Admin");
-                                    break;
-                                }
+                                    MessageBox.Show("Please Enter a Valid Role");
+                                this.Hide();
+                                new SignIn().ShowDialog();
+                                this.Close();
                             }
-                        }
-                        break;
-                
-                    case "Admin":
-                        MySqlConnection conn2 = new MySqlConnection(connString);
-                        conn2.Open();
-                        MySqlCommand command2 = new MySqlCommand(query, conn2);
-                        MySqlDataReader reader2 = command2.ExecuteReader();
-                        while (reader2.Read())
-                        {
-                            string username = reader2.GetString(1);
-                            string password = reader2.GetString(2);
-                            string role = reader2.GetString(3);
-                            if (role == Role)
+                            }
+                            else 
                             {
-                                bool temp = Person.Login(Username, username, Password, password);
-                                if (temp)
-                                {
-                                    MessageBox.Show("Successfully Signed in");
-                                    this.Hide();
-                                    new AdminHome().ShowDialog();
-                                    this.Close();
-                                    break;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Please Enter Correct Credentials, or Contact Admin");
-                                    break;
-                                }
+                                MessageBox.Show("Please Enter Valid Details");
+                                this.Hide();
+                                new SignIn().ShowDialog();
+                                this.Close();
                             }
                         }
-                        break;
-
+                    }
                 }
-             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please Enter Correct Credential, or Contact Admin");
-            }
+            
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -145,6 +102,11 @@ namespace HotelMS
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
         {
 
         }

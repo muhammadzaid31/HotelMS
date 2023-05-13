@@ -50,10 +50,10 @@
             this.rID,
             this.bID,
             this.rcID});
-            this.bkHistory.Location = new System.Drawing.Point(67, 25);
+            this.bkHistory.Location = new System.Drawing.Point(132, 24);
             this.bkHistory.Name = "bkHistory";
             this.bkHistory.ReadOnly = true;
-            this.bkHistory.Size = new System.Drawing.Size(644, 368);
+            this.bkHistory.Size = new System.Drawing.Size(641, 368);
             this.bkHistory.TabIndex = 3;
             this.bkHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bkHistory_CellContentClick);
             // 
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 423);
+            this.ClientSize = new System.Drawing.Size(877, 423);
             this.Controls.Add(this.bkHistory);
             this.Name = "ManagerGBk";
             this.Text = "FC Hotel MS";

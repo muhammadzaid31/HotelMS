@@ -147,6 +147,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "SignIn";
             this.Text = "FCB HotelMS";
+            this.Load += new System.EventHandler(this.SignIn_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

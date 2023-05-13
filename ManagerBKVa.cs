@@ -26,7 +26,7 @@ namespace HotelMS
         " pwd = '' ; " +
         "database = hotel";
 
-            string query = "SELECT bkID, bkDate, bkDuration, rID, bID, rcID FROM bookingdetails";
+            string query = "SELECT bkID, bkDate, bkDuration, rID, bID, rcID,gID FROM bookingdetails";
             MySqlConnection conn = new MySqlConnection(connString);
             conn.Open();
             MySqlCommand command = new MySqlCommand(query, conn);
@@ -37,6 +37,7 @@ namespace HotelMS
             ArrayList ListrID = new ArrayList();
             ArrayList ListbID = new ArrayList();
             ArrayList ListrcID = new ArrayList();
+            ArrayList ListgID = new ArrayList();
 
             while (reader.Read())
             {
@@ -46,6 +47,7 @@ namespace HotelMS
                 ListrID.Add(reader["rID"].ToString());
                 ListbID.Add(reader["bID"].ToString());
                 ListrcID.Add(reader["rcID"].ToString());
+                ListgID.Add(reader["gID"].ToString());
 
 
             }
@@ -61,6 +63,7 @@ namespace HotelMS
                 newRow.Cells[3].Value = ListrID[i];
                 newRow.Cells[4].Value = ListbID[i];
                 newRow.Cells[5].Value = ListrcID[i];
+                newRow.Cells[6].Value = ListgID[i];
                 bkHistory.Rows.Add(newRow);
             }
             reader.Close();
@@ -73,6 +76,7 @@ namespace HotelMS
             {
                 DataGridViewButtonColumn buttonColumn1 = (DataGridViewButtonColumn)bkHistory.Columns["bID"];
                 DataGridViewButtonColumn buttonColumn2 = (DataGridViewButtonColumn)bkHistory.Columns["rcID"];
+                DataGridViewButtonColumn buttonColumn3 = (DataGridViewButtonColumn)bkHistory.Columns["gID"];
                 if (bkHistory.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
                 {
                     if (e.ColumnIndex == buttonColumn2.Index)
@@ -90,6 +94,15 @@ namespace HotelMS
                         DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)bkHistory.Rows[e.RowIndex].Cells[e.ColumnIndex];
                         string tagValue = buttonCell.Value.ToString();
                         ManagerGBkB myForm = new ManagerGBkB();
+                        myForm.TagValue = tagValue;
+                        myForm.ShowDialog();
+                    }
+                    else if (e.ColumnIndex == buttonColumn3.Index)
+                    {
+                        // Handle buttonColumn2 click
+                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)bkHistory.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                        string tagValue = buttonCell.Value.ToString();
+                        ManagerGVp myForm = new ManagerGVp();
                         myForm.TagValue = tagValue;
                         myForm.ShowDialog();
                     }
