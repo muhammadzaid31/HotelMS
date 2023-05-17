@@ -2,10 +2,10 @@
 FCB HotelMS is hotel management system that makes the daily operations of a hotel easier and makes storing the hotel data more efficient.
 
 # Description 
-The FCB HotelMS will mainly be used by 4 types of users. The Guests, Receptionists, Managers, and Admins. The guest can browse thorugh the different types of rooms inthe hotel. The receptionist can create bookings , delete bookings, view all the booking details and to create new guest profiles. The admin can create, view all, update, delete managers,receptionists accounts and rooms from the database.
+The FCB HotelMS will mainly be used by 4 types of users. The Guests, Receptionists, Managers, and Admins. The guest can browse thorugh the different types of rooms in the hotel. The receptionist can create bookings , delete bookings, view all the booking details and to create new guest profiles. The admin can create, view all, update, delete managers,receptionists accounts and rooms from the database. The Manager can
 
 # Installation 
-Install the latest version of visual studio and Xampp on windows OS. Clone the repository in visual studio. Start a MySql server on xampp. Download the SQL file in the repository. Open myPHPAdmin and import the SQL file there and run the program on visual studio. Make sure visual studio has MySql.Data package installed from NuGet Packet Manager.
+Install the latest version of Visual Studio and Xampp on your device. This application runs only on Windows Operating System. Clone the repository in visual studio. Start a MySql and Apache server on Xampp. Download the SQL file in the repository from the folder "Database". Open myPHPAdmin and import the SQL file there. Go to the Admin, Receptionists, Managers, and Guests table and edit each row and add images in the profile picture column of each mentioned table. The images can be found in the "pictures" folder. Each Image File is named after the name of the Guest, Receptionist, Manager and Admin. Run the program on visual studio. Make sure visual studio has MySql.Data And NUnit.Framework package installed from NuGet Packet Manager.
 
 # Support 
 Feel free to reach out on email on muhammadzaid312003@gmail.com if you have an queries regarding the application or its installation.
